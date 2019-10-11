@@ -1,7 +1,7 @@
 ---
 title: "computer basic"
 date: "2018-11-11 20:11:12"
-tags: computer
+tags: [computer]
 categories: [ops]
 ---
 

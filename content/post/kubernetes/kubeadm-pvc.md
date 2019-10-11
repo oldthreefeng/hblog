@@ -1,7 +1,7 @@
 ---
 title: "kuberbetes 基于nfs的pvc"
 date: 2019-09-09 15:56:12
-tag: 
+tags: 
   - pv
   - nfs
   - kubernetes1.15.3

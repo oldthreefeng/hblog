@@ -1,7 +1,7 @@
 ---
 title: "Git Flow"
 date: 2018-11-10 22:49:10
-tags: git
+tags: [git]
 categories: [git]
 ---
 

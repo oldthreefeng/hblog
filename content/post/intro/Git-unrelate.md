@@ -1,7 +1,7 @@
 ---
 title: "refusing to merge unrelated histories"
 date: 2019-07-16 14:43:10
-tags: git
+tags: [git]
 categories: [git]
 ---
 

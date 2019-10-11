@@ -1,7 +1,7 @@
 ---
 title: "mysql slow query"
 date: 2018-12-11 17:05:12
-tag: 
+tags: 
   - mysql
   - SlowQuery
 categories: [mysql]

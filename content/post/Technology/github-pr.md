@@ -1,7 +1,7 @@
 ---
 title: "github pull request"
 date: "2018-11-11 20:11:12"
-tags: github
+tags: [github]
 categories: [github,tools]
 ---
 

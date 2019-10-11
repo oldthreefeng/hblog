@@ -1,7 +1,7 @@
 ---
 title: "Git"
 date: 2018-11-08 16:18:10
-tags: git
+tags: [git]
 categories: [git]
 ---
 

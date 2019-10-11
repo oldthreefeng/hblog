@@ -1,7 +1,7 @@
 ---
 title: "openvpn compile & install"
-date: "2019-01-18 20:11"
-tag: ops
+date: "2019-01-18 20:11:12"
+tags: ops
 ---
 
 [TOC]

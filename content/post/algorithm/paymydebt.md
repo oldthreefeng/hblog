@@ -1,7 +1,7 @@
 ---
 title: "go房贷计算器"
 date: 2019-09-24 17:40
-tag:
+tags:
   - 房贷
   - algorithm
 ---

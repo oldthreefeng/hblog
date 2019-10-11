@@ -1,7 +1,7 @@
 ---
 title: "git 远程分支清理"
 date: 2018-11-16 16:17:10
-tags: git
+tags: [git]
 categories: [git]
 ---
 

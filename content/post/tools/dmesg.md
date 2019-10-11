@@ -1,7 +1,7 @@
 ---
 title: "dmesg 添加时间戳"
 date: 2019-05-16 09:48:12
-tags: dmesg
+tags: [dmesg]
 categories: [tools]
 ---
 

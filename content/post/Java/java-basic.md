@@ -1,7 +1,7 @@
 ---
 title: "Java basic"
 date: 2017-11-10 22:43:12
-tags: java
+tags: [java]
 categories: [java]
 ---
 [TOC]
