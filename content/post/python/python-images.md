@@ -1,6 +1,6 @@
 ---
 title: "python numpy pandas"
-date: 2019-8-08 17:05:12
+date: 2019-08-08 17:05:12
 tags: [Python,numpy]
 categories: [Python]
 ---
