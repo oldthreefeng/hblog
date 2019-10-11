@@ -1,9 +1,7 @@
 ---
 title: "gin实现webhook"
 date: 2019-08-07 20:56:10
-tags: 
-  - go
-  - gin
+tags: [go,gin]
 categories: [golang] 
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "java overload"
 date: 2019-09-11 08:43:12
-tags: 
-  - java
+tags: [java]
 categories: [java]
 ---
 

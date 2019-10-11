@@ -1,9 +1,7 @@
 ---
 title: "go ssh"
 date: 2019-09-01 18:10:10
-tags: 
-  - go
-  - ssh
+tags: [go,ssh] 
 categories: [algorithm] 
 ---
 

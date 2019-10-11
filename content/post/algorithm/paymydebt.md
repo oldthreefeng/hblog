@@ -1,9 +1,8 @@
 ---
 title: "go房贷计算器"
 date: 2019-09-24 17:40:12
-tags:
-  - 房贷
-  - algorithm
+tags: [algorithm,debt]
+categories: [algorithm,golang]
 ---
 
 [TOC]

@@ -1,10 +1,8 @@
 ---
 title: "go马踏棋盘贪心算法"
 date: 2019-09-26 17:40:10
-tags:
-  - 贪心算法
-  - algorithm
-categories: [algorithm] 
+tags: [贪心算法,algorithm]
+categories: [algorithm,golang] 
 ---
 
 [TOC]

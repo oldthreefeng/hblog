@@ -1,8 +1,7 @@
 ---
 title: "go module"
 date: 2019-08-28 18:10:10
-tags: 
-  - module
+tags: [module]
 categories: [golang] 
 ---
 

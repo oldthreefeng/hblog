@@ -1,9 +1,7 @@
 ---
 title: "Go 开发工具安装"
 date: 2018-12-09 15:56:10
-tags: 
-  - go
-  - goland
+tags: [goland]
 categories: [golang] 
 ---
 

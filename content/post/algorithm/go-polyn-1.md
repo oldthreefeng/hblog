@@ -1,12 +1,8 @@
 ---
 title: "Go 多项式实现(1)"
 date: 2019-09-04 15:56:10
-tags: 
-  - markdown
-  - polynomial
-  - algorithm
-  - link
-categories: [algorithm] 
+tags: [markdown,polynomial,algorithm,link]
+categories: [algorithm,golang] 
 ---
 
 [TOC]

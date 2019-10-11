@@ -1,9 +1,7 @@
 ---
 title: "sonarqube 权限配置使用"
 date: 2019-03-11 08:43:12
-tags: 
-  - java
-  - sonar
+tags: [java,sonar]
 categories: [java,sonar]
 ---
 

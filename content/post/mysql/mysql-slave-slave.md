@@ -1,7 +1,7 @@
 ---
 title: "mysql slave slave"
 date: 2019-07-16 15:56:12
-tags: mysql
+tags: [mysql]
 categories: [mysql]
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: "mysql-5.7.22 编译安装"
 date: 2019-03-10 08:43:12
-tags: 
-  - mysql
-  - sonar
+tags: [mysql,sonar]
 categories: [java,mysql]
 ---
 

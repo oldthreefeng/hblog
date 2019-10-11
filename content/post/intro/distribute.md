@@ -1,11 +1,7 @@
 ---
 title: "分布式"
 date: 2017-11-10 23:56:10
-tags: 
-  - redis
-  - paxos
-  - Raft
-  - algorithm
+tags: [redis,paxos,Raft,algorithm]
 categories: [algorithm]
 ---
 

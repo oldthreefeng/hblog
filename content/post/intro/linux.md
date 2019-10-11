@@ -1,10 +1,7 @@
 ---
 title: "linux"
 date: 2017-11-10 23:36:10
-tags: 
-  - vim
-  - tar
-  - linux
+tags: [vim,tar,linux]
 categories: [linux]
 ---
 

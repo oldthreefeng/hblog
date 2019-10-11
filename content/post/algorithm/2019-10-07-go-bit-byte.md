@@ -2,7 +2,7 @@
 title: "Go 位运算详解"
 date: 2019-09-17 00:40:32
 tags: [bit,leetcode]
-categories: [algorithm] 
+categories: [algorithm,golang]  
 ---
 
 [TOC]

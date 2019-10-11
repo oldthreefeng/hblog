@@ -1,9 +1,7 @@
 ---
 title: "go flag"
 date: 2019-08-28 18:10:10
-tags: 
-  - go
-  - flag
+tags: [go,flag]
 categories: [golang] 
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "go filemode 源码理解"
 date: 2019-08-26 14:56:10
-tags: 
-  - go
+tags: [go,mode]
 categories: [golang] 
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: "go encrypt&decrypt"
 date: 2019-08-28 18:10:10
-tags: 
-  - hash
-  - rsa
-  - ssh
-  - crypto
-categories: [algorithm] 
+tags: [hash,rsa,ssh,crypto]
+categories: [algorithm,golang] 
 ---
 
 [TOC]

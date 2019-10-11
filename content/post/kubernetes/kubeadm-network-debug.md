@@ -1,10 +1,7 @@
 ---
 title: "kuberbetes 网络排错"
 date: 2019-09-06 15:56:11
-tags: 
-  - network
-  - kubernetes1.15.3
-  - flannel
+tags: [network,kubernetes,flannel]
 categories: [kubernetes]
 ---
 

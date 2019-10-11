@@ -1,9 +1,7 @@
 ---
 title: "Go 资源汇总"
 date: 2018-11-09 15:56:10
-tags: 
-  - go
-  - resources
+tags: [go,resources]
 categories: [golang] 
 ---
 

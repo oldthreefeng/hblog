@@ -1,9 +1,7 @@
 ---
 title: "MySQL FEDERATED"
 date: 2019-05-23 10:44:32
-tags: 
-  - mysql
-  - federated
+tags: [mysql,federated]
 categories: [mysql]
 ---
 

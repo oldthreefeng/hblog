@@ -1,9 +1,7 @@
 ---
 title: "mysql lost password"
 date: 2018-12-11 17:05:12
-tags: 
-  - mysql
-  - password
+tags: [mysql,password]
 categories: [mysql]
 ---
 [TOC]

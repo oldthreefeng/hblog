@@ -1,11 +1,8 @@
 ---
 title: "go Paxos"
 date: 2019-08-28 18:10:10
-tags: 
-  - go
-  - Paxos
-  - algorithm
-categories: [algorithm] 
+tags: [go,paxos,algorithm]
+categories: [algorithm,golang] 
 ---
 
 [TOC]

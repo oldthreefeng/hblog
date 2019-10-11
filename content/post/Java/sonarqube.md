@@ -1,9 +1,7 @@
 ---
 title: "sonarqube 安装部署"
 date: 2019-03-08 08:43:12
-tags: 
-  - java
-  - sonar
+tags: [java,sonar]
 categories: [java]
 ---
 [TOC]

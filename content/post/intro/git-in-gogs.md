@@ -1,10 +1,7 @@
 ---
 title: "Git in Gogs with SourceTree"
 date: 2019-09-11 15:49:10
-tags: 
-  - git
-  - gogs
-  - sourceTree
+tags: [git,gogs,sourceTree]
 categories: [git]
 ---
 
