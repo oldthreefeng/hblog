@@ -2,8 +2,6 @@
 title: "记一次阿里云服务器转移"
 date: "2019-05-07 17:09:32"
 tags: [ops,devOps]
-  - ops
-  - devops
 categories: [ops]
 ---
 [TOC]
