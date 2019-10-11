@@ -1,7 +1,7 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://fenghong.tech/"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Even - A super concise theme for Hugo"
+title = "Louis - A super concise theme for Hugo"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -168,7 +168,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     options = ""            # default: "{theme: 'simple'}"
 
   [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
-    enable = false
+    enable = true
     siteUV = true
     sitePV = true
     pagePV = true
@@ -179,21 +179,21 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://localhost:1313"
-    c-twitter = "http://localhost:1313"
-    d-facebook = "http://localhost:1313"
-    e-linkedin = "http://localhost:1313"
-    f-google = "http://localhost:1313"
-    g-github = "http://localhost:1313"
-    h-weibo = "http://localhost:1313"
-    i-zhihu = "http://localhost:1313"
-    j-douban = "http://localhost:1313"
-    k-pocket = "http://localhost:1313"
-    l-tumblr = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
-    o-bilibili = "http://localhost:1313"
+    a-email = "mailto:louis@wangke.co"
+    b-stack-overflow = "https://fenghong.tech/"
+    c-twitter = "https://twitter.com/louishong17"
+    d-facebook = "https://www.facebook.com/feng.hong.75491"
+    e-linkedin = "https://www.linkedin.com/in/丰-洪-242238195/"
+    f-google = "https://wiki.fenghong.tech"
+    g-github = "https://github.com/oldthreefeng"
+    h-weibo = "https://www.weibo.com/2910951313"
+    i-zhihu = "https://www.zhihu.com/people/hong-feng-87-10"
+    j-douban = "https://wiki.fenghong.tech"
+    k-pocket = "https://wiki.fenghong.tech"
+    l-tumblr = "https://wiki.fenghong.tech"
+    m-instagram = "https://instagram.com/louisehong4168"
+    n-gitlab = "https://gogs.wangke.co"
+    o-bilibili = "https://wiki.fenghong.tech"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
