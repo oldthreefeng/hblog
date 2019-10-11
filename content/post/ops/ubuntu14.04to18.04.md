@@ -1,7 +1,7 @@
 ---
 title: "ubuntu 14.04 upgrade to 18.04(LTS)"
 date: "2019-09-03 15:11:12"
-tags: ops
+tags: 
   - ubuntu
   - upgrade
 categories: [ops]
