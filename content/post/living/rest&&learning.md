@@ -1,7 +1,7 @@
 ---
 title: "rest&&learnong"
 date: 2019-07-16 15:56:12
-tags: learning
+tags: [learning]
 categories: [living]
 ---
 
