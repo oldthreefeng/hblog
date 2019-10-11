@@ -1,9 +1,8 @@
 ---
 title: Http(Apache2)
 date: 2018-06-21 16:03:32
-urlname: httpd2
-tags: Linux
-categories: Http
+tags: [Linux]
+categories: [Http]
 ---
 
 摘要：压力测试工具ab，访问工具curl，http状态码，https的实现过程

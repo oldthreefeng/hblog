@@ -1,9 +1,8 @@
 ---
 title: Http(Apache1)
 date: 2018-06-19 16:03:32
-urlname: httpd1
-tags: Linux
-categories: Http
+tags: [Linux]
+categories: [Http]
 ---
 
 摘要：Apache的httpd服务常见配置解析，配置文件的实验----

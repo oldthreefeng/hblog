@@ -1,11 +1,8 @@
 ---
 title: Linux下路由配置梳理
 date: 2018-04-20 17:59:32
-urlname: route
-tags: 
-- Linux
-- internet
-categories: internet
+tags: [Linux,internet]
+categories: [internet]
 ---
 摘要：路由的基本知识；路由的配置；路由的相关实验
 # 路由的基础知识

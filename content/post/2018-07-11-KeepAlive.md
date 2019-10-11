@@ -1,12 +1,8 @@
 ---
 title: KeepAlive
 date: 2018-07-11 19:59:32
-urlname: keepalive
-tags: 
-- Linux
-- server
-- internet
-categories: internet
+tags: [Linux,internet,server]
+categories: [internet]
 ---
 
 摘要：

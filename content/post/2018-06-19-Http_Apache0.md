@@ -1,9 +1,8 @@
 ---
 title: Http(Apache)
 date: 2018-06-19 10:03:32
-urlname: httpd
-tags: Linux
-categories: Http
+tags: [Linux]
+categories: [Http]
 ---
 
 摘要：internet的发展，套接字socket的简介，HTTP协议，URL-------

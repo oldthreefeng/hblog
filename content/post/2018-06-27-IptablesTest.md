@@ -1,12 +1,8 @@
 ---
 title: IptablesTest
 date: 2018-06-27 15:59:32
-urlname: iptables1
-tags: 
-- Linux
-- server
-- Safe
-categories: internet
+tags: [Linux,safe,server]
+categories: [iptables]
 ---
 
 摘要：iptabels练习题

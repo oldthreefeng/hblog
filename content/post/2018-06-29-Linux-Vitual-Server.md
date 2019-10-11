@@ -1,12 +1,8 @@
 ---
 title: Linux Vitual Server
 date: 2018-06-29 16:59:32
-urlname: lvs
-tags: 
-- Linux
-- server
-- internet
-categories: LVS
+tags: [Linux,LB,server]
+categories: [lvs]
 ---
 
 摘要：

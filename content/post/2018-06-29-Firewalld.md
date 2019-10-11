@@ -1,12 +1,8 @@
 ---
 title: firewalld
 date: 2018-06-29 15:59:32
-urlname: firewalld
-tags: 
-- Linux
-- server
-- Safe
-categories: internet
+tags: [Linux,safe,server,firewalld]
+categories: [iptables]
 ---
 摘要：
 
