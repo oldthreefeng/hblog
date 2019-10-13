@@ -1,7 +1,7 @@
 ---
-title: "LRU算法"
-date: 2019-10-13 12:40:10
-tags: [lru,doubly linked list,hashMap]
+title: "LRU 算法"
+date: 2019-10-12 12:40:10
+tags: [lru,doublyLinkedList,hashMap]
 categories: [algorithm,golang] 
 ---
 
