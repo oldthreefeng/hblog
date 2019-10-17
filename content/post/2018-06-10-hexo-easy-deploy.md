@@ -115,7 +115,7 @@ hexo g && rsync -v -r /data/hexo/public/  46.123.43.127:/www
 
 我是个爱折腾的，至此，云主机搭建完毕，hexo静态页面很清爽！  
 
-博客主题配置，及文章上传方法，请看上篇博文[hexo进阶](https://fenghong.tech/hexo-Developed.html)
+博客主题配置，及文章上传方法，请看上篇博文[hexo进阶](https://blog.fenghong.tech/post/2018-06-10-hexo-developed/)
 
 # git
 

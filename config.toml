@@ -1,6 +1,6 @@
-baseURL = "https://fenghong.tech/"
-languageCode = "en"
-defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+baseURL = "https://blog.fenghong.tech/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Louis - A super concise theme for Hugo"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
@@ -29,27 +29,27 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
+  name = "首页"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "Archives"
+  name = "归档"
   weight = 20
   identifier = "archives"
   url = "/post/"
 [[menu.main]]
-  name = "Tags"
+  name = "标签"
   weight = 30
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
-  name = "Categories"
+  name = "分类"
   weight = 40
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "About"
+  name = "关于我"
   weight = 50
   identifier = "about"
   url = "/about/"
@@ -186,14 +186,14 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.social]                                         # 社交链接
     a-email = "mailto:louis@wangke.co"
-    b-stack-overflow = "https://fenghong.tech/"
+    # b-stack-overflow = "https://fenghong.tech/"
     c-twitter = "https://twitter.com/louishong17"
     d-facebook = "https://www.facebook.com/feng.hong.75491"
     e-linkedin = "https://www.linkedin.com/in/丰-洪-242238195/"
-    f-google = "https://wiki.fenghong.tech"
+    # f-google = "https://wiki.fenghong.tech"
     g-github = "https://github.com/oldthreefeng"
     h-weibo = "https://www.weibo.com/2910951313"
-    i-zhihu = "https://www.zhihu.com/people/hong-feng-87-10"
+    i-zhihu = "https://www.zhihu.com/peopleblog./hong-feng-87-10"
     # j-douban = "https://wiki.fenghong.tech"
     # k-pocket = "https://wiki.fenghong.tech"
     # l-tumblr = "https://wiki.fenghong.tech"
