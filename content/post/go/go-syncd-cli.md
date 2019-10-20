@@ -1,22 +1,22 @@
 ---
-title: "syncd-cli 用法"
+title: "syncd-cli 介绍及用法"
 date: 2019-10-20T15:54:18+08:00
 lastmod: 2019-10-20T15:54:18+08:00
 keywords: []
 description: ""
-tags: [go,gin,flag,syncd]
+tags: [go,gin,flag,syncd,gorequest,logrus]
 categories: [syncd]
 author: ""
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
-comment: false
-toc: false
+comment: true
+toc: true
 autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
+contentCopyright: true
 reward: false
 mathjax: false
 mathjaxEnableSingleDollar: false
@@ -45,7 +45,7 @@ sequenceDiagrams:
 
 > syncd-cli 是自动化部署工具 [syncd](https://github.com/dreamans/syncd) 的一个命令行客户端，用于批量添加server，实现一键自动添加，提高开发效率。
 
-> Syncd是一款开源的代码部署工具，它具有简单、高效、易用等特点，可以提高团队的工作效率。
+> [Syncd](https://github.com/dreamans/syncd)是一款开源的代码部署工具，它具有简单、高效、易用等特点，可以提高团队的工作效率。
   
 
 ## 安装
