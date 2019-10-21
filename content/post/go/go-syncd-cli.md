@@ -1,7 +1,7 @@
 ---
 title: "syncd-cli 介绍及用法"
 date: 2019-10-20T15:54:18+08:00
-lastmod: 2019-10-20T15:54:18+08:00
+lastmod: 2019-10-21T11:54:18+08:00
 keywords: []
 description: ""
 tags: [go,gin,flag,syncd,gorequest,logrus]
@@ -71,6 +71,7 @@ $ ./syncd-cli -h
 ```
 
 ## Usage
+### @v1.0.0
 
 ```shell
 # ./syncd-cli -h                                                                                                  [12:18:53]
@@ -105,8 +106,89 @@ Options:
 
 ```
 
+### @v1.1.0
 
-## example
+从命令行读取批量文件的信息,感觉太冗余了, 不方便创建,还是以文件的方式创建批量容易一点,
+所用想了一个从文件里面读取信息,然后根据信息创建相应资源的方法.
+
+```shell
+$ ./syncd-cli -h
+syncd-cli version:1.1.0
+Usage syncd-cli <command> [-afhpu]
+
+command <apply>|<get>  [user|server] <?-f files>
+
+add server example:
+        1) syncd-cli apply user -f files
+        2) syncd-cli apply server -f files
+list server and user example:
+        1) syncd-cli get user
+        2) syncd-cli get server
+
+Options:
+  -f, --file string       add server/user from files
+  -h, --help              this help
+  -a, --hostApi string    sycnd server addr api (default "http://127.0.0.1:8878/")
+  -p, --password string   password for syncd tools (default "111111")
+  -u, --user string       user for syncd tools (default "syncd")
+
+```
+
+**file文件的格式**
+
+`testserver`,`testuser`等文件名称无要求, 但是对文件的格式要求.以一个空格进行分割.
+
+```shell
+# 第一列是groupid,对应的集群id;
+# 第二列是name, 对应的是server的名字
+# 第三列是ip/hostname, 对应server的ip或者域名
+# 第四列是sshport, 对应的是server的ssh端口
+$ cat testserver
+1 test01 test.wangke.co 22
+1 test02 test01.wangke.co 9527
+1 test03 test02.wangke.co 6822
+```
+`testuser`文件内容以空格区分,共四列.(后续可以添加至6列,源码的user还有电话号码,真实姓名等,非必须 批量创建的默认密码为`111111`)
+
+```shell
+# 第一列是role_id, 对应的是角色, 比如1是管理员
+# 第二列是name, 对应的是用户名
+# 第三列是email, 对应的是用户的邮箱
+# 第四列是status, 对应的是用户能否登陆.
+$ cat testuser
+1 test01 test01@wangke.co 1
+1 test02 test02@wangke.co 1
+
+```
+
+因为`testuser`和`testserver`的的文件格式和数据类型是一样的, 所用到的方法是一样的, 唯一的区分就是利用`apply user`还是`apply server`
+
+```go
+type server struct {
+    id int
+    name string
+    ip string
+    port int
+}
+
+type user struct {
+	id int
+	name string
+	email string
+	status int
+}
+
+```
+### 重要提醒
+```
+
+方法是一样的. 所以标志位很重要, 不然创建错了就是连环错误了.
+
+$ syncd-cli apply user -f testuser
+$ syncd-cli apply server -f testserver
+```
+
+## Example
 ``` 
 root@master-louis: ~/go/src/github.com/oldthreefeng/syncd-cli master ⚡
 # ./syncd-cli -i 192.168.1.2,text.example.com -n test1,texte -s 9527,22              [12:18:58]
@@ -170,6 +252,7 @@ Copyright 2019 louis.
 package main
 
 import (
+	"bufio"
 	"crypto/md5"
 	"encoding/hex"
 	"encoding/json"
@@ -199,6 +282,7 @@ var (
 	Ips      []string
 	SSHPort  []int
 	add      string
+	files    string
 	h        bool
 )
 
@@ -376,22 +460,17 @@ func authCookie() *http.Cookie {
 }
 
 func usages() {
-	_, _ = fmt.Fprintf(os.Stderr, `syncd-cli version:1.0.0
-Usage syncd-cli <command> [-aupginsh] 
+	_, _ = fmt.Fprintf(os.Stderr, `syncd-cli version:1.1.0
+Usage syncd-cli <command> [-afhpu] 
 
-command [--add] [--list]  [user|server]
+command <apply|get>  <user|server> [?-f files]
 
 add server example: 
-	1) syncd-cli -d server -g 2 -i 192.168.1.1,test.example.com -n test01,test02 -s 9527,22
-	2) syncd-cli --add server   --roleGroupId 2 --ipEmail 192.168.1.1 --names test01 --sshPort 9527
-add user example:
-	1) syncd-cli --add user --ipEmail text@wangke.co --names test01
-	2) syncd-cli  -d user -i text@wangke.co -n test01
+	1) syncd-cli apply user -f files
+	2) syncd-cli apply server -f files
 list server and user example:
-	1) syncd-cli -l user 
-	2) syncd-cli -l server 
-	3) syncd-cli --list user 
-	4) syncd-cli --list server 
+	1) syncd-cli get user
+	2) syncd-cli get server
 
 Options:
 `)
@@ -404,14 +483,82 @@ func init() {
 	flag.StringVarP(&user, "user", "u", "syncd", "user for syncd tools")
 	flag.StringVarP(&password, "password", "p", "111111", "password for syncd tools")
 
-	flag.StringVarP(&add, "add", "d", "", "add user or server")
-	flag.StringVarP(&list, "list", "l", "", "list server and user")
-	flag.IntVarP(&GroupId, "roleGroupId", "g", 1, "group_id for cluster // or role_id for user, must be needed")
-	flag.StringSliceVarP(&Ips, "ipEmail", "i", []string{""}, "set ip/hostname to the cluster with names // or email for add user, use ',' to split")
-	flag.StringSliceVarP(&Names, "names", "n", []string{""}, "set names to the cluster with ips, use ',' to split")
-	flag.IntSliceVarP(&SSHPort, "sshPort", "s", []int{}, "set sshPort to the cluster, use ',' to split")
+	flag.StringVarP(&add, "add", "d", "", "add user or server(deprecated)")
+	flag.StringVarP(&files, "file", "f", "", "add server/user from files")
+	flag.StringVarP(&list, "list", "l", "", "list server and user(deprecated)")
+	flag.IntVarP(&GroupId, "roleGroupId", "g", 1, "group_id for cluster // or role_id for user, must be needed(deprecated)")
+	flag.StringSliceVarP(&Ips, "ipEmail", "i", []string{""}, "set ip/hostname to the cluster with names // or email for add user, use ',' to split(deprecated)")
+	flag.StringSliceVarP(&Names, "names", "n", []string{""}, "set names to the cluster with ips, use ',' to split(deprecated)")
+	flag.IntSliceVarP(&SSHPort, "sshPort", "s", []int{}, "set sshPort to the cluster, use ',' to split(deprecated)")
 	flag.BoolVarP(&h, "help", "h", false, "this help")
 	flag.Usage = usages
+}
+
+func useV100() {
+	//是否列出server,user
+
+	switch list {
+	case "user":
+		List("api/user/list")
+	case "server":
+		List("api/server/list")
+	default:
+		fmt.Println("use `syncd-cli get [user | server]` instead")
+	}
+
+	if Ips[0] == "" || Names[0] == "" || SSHPort[0] == 0 {
+		return
+	}
+	switch add {
+	case "user":
+		// userAdd() //easy to add
+		for k, v := range Ips {
+			userAdd(GroupId, Names[k], v, 1)
+		}
+	case "server":
+		// Ips未指定,则返回
+		for k, v := range Ips {
+			serverAdd(GroupId, Names[k], v, SSHPort[k])
+		}
+	}
+}
+
+type server struct {
+	gid  int
+	name string
+	ip   string
+	port int
+}
+
+func readFromServerFile(file string) []server {
+	openFile, err := os.Open(file)
+	if err != nil {
+		log.Fatalf("%v",err)
+	}
+	defer openFile.Close()
+	var newserver []server
+	scanner := bufio.NewScanner(openFile)
+	scanner.Split(bufio.ScanLines)
+	for scanner.Scan() {
+		line := scanner.Text()
+
+		if len(line) == 0 {
+			break
+		}
+		var gid, port int
+		var name, ip string
+		_, err := fmt.Sscanf(line, "%d %s %s %d", &gid, &name, &ip, &port)
+		if err != nil {
+			return nil
+		}
+		newserver = append(newserver, server{
+			gid:  gid,
+			name: name,
+			ip:   ip,
+			port: port,
+		})
+	}
+	return newserver
 }
 
 func main() {
@@ -424,29 +571,49 @@ func main() {
 	// 登录认证
 	login(user, password)
 
-	// 是否列出server,user
-	switch list {
-	case "user":
-		List("api/user/list")
-	case "server":
-		List("api/server/list")
+	// 使用v1.0.0
+	if list != "" {
+		useV100()
 	}
-	// 如果要添加的列表为0,直接返回, 不用判断add操作.
-	if Ips[0] == "" {
-		return
-	}
-	switch add {
-	case "user":
-		// userAdd() //easy to add
-		for k,v := range Ips {
-			userAdd(GroupId,Names[k],v,1)
+
+	switch os.Args[1] {
+	case "apply":
+		switch os.Args[2] {
+		case "server":
+			ser := readFromServerFile(files)
+			for _, v := range ser {
+				serverAdd(v.gid, v.name, v.ip, v.port)
+			}
+		case "user":
+			usr := readFromServerFile(files)
+			for _, v := range usr {
+				// 偷个懒, 数据类型一样,结构一样, 所以从文件读取的是一样的
+				// v.gid ==> roleId
+				// v.name==> username
+				// v.ip  ==> email
+				// v.port==> status
+				userAdd(v.gid, v.name, v.ip, v.port)
+			}
+		default:
+			fmt.Println("syncd-cli apply [user|server] -f files")
 		}
-	case "server":
-		// Ips未指定,则返回
-		for k, v := range Ips {
-			serverAdd(GroupId, Names[k], v, SSHPort[k])
+
+	case "get":
+		switch os.Args[2] {
+		case "user":
+			List("api/user/list")
+		case "server":
+			List("api/server/list")
+		default:
+			fmt.Println("syncd-cli get [user | server]")
 		}
+	default:
+		fmt.Println()
+		fmt.Println("	Use syncd-cli@v1.1.0 instead")
+		fmt.Println("syncd-cli <get|apply> <user|server> [?-f filename>]")
+		fmt.Println("syncd-cli <get|apply> <user|server> [?--file filename]")
 	}
+
 }
 
 ```
