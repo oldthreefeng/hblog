@@ -24,7 +24,7 @@ $ mkdir .kube
 $ vim .kube/config ## 将上面获取的内网凭证复制即可
 $ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl
 
-$ chmod +x kubectl ** mv kubectl /usr/bin
+$ chmod +x kubectl && mv kubectl /usr/bin
 $ kubectl get nodes
 NAME            STATUS   ROLES      AGE   VERSION
 10.23.140.24    Ready    k8s-node   8h    v1.15.5
