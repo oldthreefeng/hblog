@@ -1,6 +1,6 @@
 ---
 title: "基于uk8s部署的CI/CD"
-date: 2019-11-01 21:56:12
+date: 2019-11-01T21:54:18+08:00
 tags: [pv,ci,pvc,kubernetes,uk8s,jenkins,gogs]
 categories: [kubernetes]
 ---
