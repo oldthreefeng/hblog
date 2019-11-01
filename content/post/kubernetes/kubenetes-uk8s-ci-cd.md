@@ -274,7 +274,7 @@ Finished: SUCCESS
 
 ![1572619287421](http://pic.fenghong.tech/k8s/1572619287421.png)
 
-源码仓库在[gogs.wangke.co](https://gogs.wangke.co/go/uk8s-test.git)
+源码仓库在[gogs.wangke.co](https://gogs.wangke.co/go/uk8s-test)
 
 ### 不足之处 ### 
 
