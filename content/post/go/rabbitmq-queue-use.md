@@ -1,6 +1,6 @@
 ---
 title: "RabbitMq消息队列使用"
-date: 2019-11-07T17:54:18+08:00
+date: 2019-11-07T13:54:18+08:00
 tags: [queue,rabbitmq,cluster,haproxy,go]
 categories: [server]
 ---
