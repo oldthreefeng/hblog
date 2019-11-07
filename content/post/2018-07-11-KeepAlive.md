@@ -1,8 +1,8 @@
 ---
 title: KeepAlive
 date: 2018-07-11 19:59:32
-tags: [Linux,internet,server]
-categories: [internet]
+tags: [Linux,cluster,keepalived,ansible]
+categories: [server]
 ---
 
 摘要：

@@ -279,14 +279,6 @@ defaults
         #服务端超时
         timeout server 120s
 
-        maxconn 2000
-        #连接超时
-        timeout connect 5s
-        #客户端超时
-        timeout client 120s
-        #服务端超时
-        timeout server 120s
-
 #绑定配置
 listen rabbitmq_cluster
         bind 0.0.0.0:5671

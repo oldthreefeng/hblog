@@ -1,7 +1,7 @@
 ---
 title: Linux Vitual Server
 date: 2018-06-29 16:59:32
-tags: [Linux,LB,server]
+tags: [Linux,LB,server,cluster]
 categories: [lvs]
 ---
 
