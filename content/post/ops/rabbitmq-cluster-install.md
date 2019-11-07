@@ -24,12 +24,44 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)
 
 ### 初始化环境
 
+分别修改主机名
+
+```shell script
+$ hostnamectl set-hostname c1 ## c1 作为当前主机名.
+```
+
+如果 DNS 不支持解析主机名称，则需要修改每台机器的 `/etc/hosts` 文件
+
 ```bash
-$ cat /etc/hosts
+$ cat >> /etc/hosts <<EOF
 192.168.133.133 c4
 192.168.133.128	c1
 192.168.133.129 c2
 192.168.133.130 c3
+EOF
+```
+
+解除linux系统最大进程数和最大文件打开数
+
+```bash 
+$ cat >> /etc/security/limits.conf << EOF
+*   soft noproc   65535  
+*   hard noproc   65535  
+*   soft nofile   65535  
+*   hard nofile   65535
+EOF
+
+$ cat >> /etc/profile.d/limits.sh <<EOF
+ulimit -u 65535        ## max user processes
+ulimit -n 65535        ## open files
+ulimit -d unlimited    ## data seg size
+ulimit -m unlimited    ## max memory size
+ulimit -s unlimited    ## stack size
+ulimit -t unlimited    ## cpu time
+ulimit -v unlimited    ## virtual memory
+EOF
+
+$ source /etc/profile.d/limits.sh
 ```
 
 习惯性做完互信工作,  习惯性禁用防火墙(生产环境自行使用`iptables`). c1主机为`ansible`管理主机,详细查询ansible[的这篇文章](https://blog.fenghong.tech/post/2018-06-10-ansible/)
@@ -40,7 +72,14 @@ $ ssh-copy-id localhost
 $ for i in c1 c2 c3 c4 ;do scp -r /root/.ssh $i:/root/.ssh ;done
 ```
 
-防火墙配置
+关闭 SELinux
+
+```
+setenforce 0
+sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+```
+
+防火墙配置 (选择做, 楼主实验用的策略是`iptables -F`, 生产环境建议如下)
 
 ```bash
 $ firewall-cmd --permanent --add-port=25672/tcp
