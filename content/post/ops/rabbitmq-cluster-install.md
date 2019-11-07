@@ -32,7 +32,7 @@ $ cat /etc/hosts
 192.168.133.130 c3
 ```
 
-习惯性做完互信工作,  习惯性禁用防火墙(生产环境自行使用`iptables`). c1主机为`ansible`管理主机
+习惯性做完互信工作,  习惯性禁用防火墙(生产环境自行使用`iptables`). c1主机为`ansible`管理主机,详细查询ansible[的这篇文章](https://blog.fenghong.tech/post/2018-06-10-ansible/)
 
 ```bash
 $ ssh-keygen
@@ -160,7 +160,7 @@ $ rabbitmqctl start_app
 $ rabbitmqctl join_cluster rabbit@c1 --ram
 ```
 
-查看集群状态
+#### 查看`rabbitMq`集群状态
 
 ```bash
 $ rabbitmqctl cluster_status
@@ -177,6 +177,17 @@ Running Nodes
 	rabbit@c3
 	rabbit@c4
 ...
+```
+
+#### `rabbitMq`插件安装
+
+```bash
+## list 
+$ rabbitmq-plugins list -v  
+## list plugins whose name contains "management"
+$ rabbitmq-plugins list -v management  
+## install 
+$ rabbitmq-plugins enable rabbitmq_management  
 ```
 
 到这里,` rabbitMq`基本已经部署完毕. 
