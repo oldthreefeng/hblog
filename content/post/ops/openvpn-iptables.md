@@ -7,6 +7,8 @@ categories: [ops,iptables]
 
 > 背景: 公司内网繁多, 每个部门的权限不一样, 可以查看的内网等级也不一样. 因此需要在vpn上做权限分离, 实现租户隔离. 方法是采用iptables的SNAT来实现权限控制. 具体如下:
 
+`$表示bash shell, #表示注释, > 表示数据库`
+
 ## 安装前准备
 
 1、配置阿里云 YUM 镜像
@@ -44,7 +46,7 @@ $ systcl -p ## 生效
 ## 安装 OpenVPN
 
 ```bash
-# yum -y install openssh-server lzo openssl openssl-devel openvpn \
+$ yum -y install openssh-server lzo openssl openssl-devel openvpn \
 NetworkManager-openvpn openvpn-auth-ldap zip unzip  easy-rsa iptables-services
 ```
 
@@ -89,7 +91,8 @@ $ openvpn --genkey --secret ta.key
 
 如下`server.conf`, 使用的是tap, 可以自由定义客户端ip地址.根据IP地址来进行权限分离.
 
-```
+```bash
+$ cat server.conf
 port 11194
 proto tcp-server
 dev tap
@@ -117,10 +120,6 @@ server 172.30.0.0 255.255.0.0
 #push "dhcp-option DNS 114.114.114.114"
 ## 抽取公共的权限push路由功能, 所有具有vpn的人都可以访问如下内网.
 push "route ip 255.255.255.255 " # https://athena.fenghong.tech
-push "route ip 255.255.255.255 " # https://fenghong.tech
-push "route ip 255.255.255.255 " # http://confluence.fenghong.tech:8090
-push "route ip 255.255.255.255 " # http://apollo-portal.fenghong.tech:8070/
-push "route ip 255.255.255.255 " # https://moni-vpc.fenghong.tech
 push "route ip 255.255.255.255 " # classic jump
 push "route ip 255.255.255.255 " # vpc jump
 push "route ip 255.255.255.255 " # vpc java testing
@@ -367,7 +366,7 @@ find ./ -name "$client*" -exec rm -fv {} \;
 
 ## 总结
 
-至此, openvpn的访问权限控制已经完毕. 核心就是利用`tap`模式的`ifconfig-pool`来实现客户端的ip受控, 再根据客户端的ip进行分类,分组, 同组成员的权限相同,根据各组的目录权限,push各组的route值客户端主机上. 设置 一组ip, 为超级用户ip组, 拥有超级权限. 访问所有资源. 抽取vpn的公共权限, 推送至每个客户端的路由上. (最低权限.)
+至此, openvpn的访问权限控制已经完毕. 核心就是利用`tap`模式的`ifconfig-pool`来实现客户端的ip受控, 再根据客户端的ip进行分类,分组, 同组成员的权限相同,根据各组的目录权限,push各组的route值客户端主机上, 根据客户端的ip来进行SNAT,实现权限分离. 设置 一组ip, 为超级用户ip组, 拥有超级权限. 访问所有资源. 抽取vpn的公共权限, 推送至每个客户端的路由上. (最低权限.)
 
 ### 参考
 
@@ -378,3 +377,4 @@ find ./ -name "$client*" -exec rm -fv {} \;
 - [centos7安装openvpn](https://www.xbzdr.com/263.html)
 
 谢谢您的观看
+
