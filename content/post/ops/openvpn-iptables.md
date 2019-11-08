@@ -44,7 +44,8 @@ $ systcl -p ## 生效
 ## 安装 OpenVPN
 
 ```bash
-# yum -y install openssh-server lzo openssl openssl-devel openvpn NetworkManager-openvpn openvpn-auth-ldap zip unzip  easy-rsa iptables-services
+# yum -y install openssh-server lzo openssl openssl-devel openvpn \
+NetworkManager-openvpn openvpn-auth-ldap zip unzip  easy-rsa iptables-services
 ```
 
 ### 创建证书变量
