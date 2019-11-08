@@ -64,7 +64,7 @@ func main() {
 
 编写`dockerfile`, 主要是编译go项目, 然后把生成的二进制拷贝到Alpine运行, 依赖最小, 生成的镜像也很小, 只有30M左右
 
-```Dockerfile
+```
 FROM  uhub.service.ucloud.cn/hahahahaha/golang:1.12.7  AS builder
 
 ENV GO111MODULE=on
@@ -80,12 +80,8 @@ FROM alpine:3.7
 RUN apk add tzdata ca-certificates && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && apk del tzdata && rm -rf /var/cache/apk/* \
-    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
-    && apk add --no-cache git \
-    && apk add --no-cache openssh
 COPY --from=builder /deploy /bin/deploy
 ENTRYPOINT ["/bin/deploy"]
-
 ```
 
 编写yaml文件进行部署至k8s, 一个deployment和一个service, 暴露方式为LoadBalancer+ClusterIp
