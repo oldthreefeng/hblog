@@ -1,7 +1,8 @@
 ---
 title: "openvpn compile & install"
 date: "2019-01-18 20:11:12"
-tags: [ops]
+tags: [ops,vpn,iptables]
+categories: [ops]
 ---
 
 [TOC]
@@ -86,22 +87,12 @@ $ ls keys/
 
 ### 2.1 安装依赖
 
-pam-devel：
+pam-devel 和 lzo：
 
 ```
-$ yum install -y pam-devel
+$ yum install -y pam-devel ;lzo-devel
 ```
 
-lzo:
-
-```
-$ wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz
-$ tar -zxvf lzo-2.10.tar.gz
-$ cd lzo-2.10
-$ ./configure --enable-shared 
-$ make 
-$ make install 
-```
 
 ### 2.2 编译安装OpenVPN
 
