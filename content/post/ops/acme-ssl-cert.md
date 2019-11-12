@@ -11,6 +11,14 @@ categories: [server,ops]
 >
 > Let's Encrypt 已经支持通配符SSL证书，这是很让人开心的事情。由于通配符域名的特殊性，比如说你不应该在只持有子域名如ailion.github.com时，就能申请到*.github.com的通配符证书，不然github就完蛋了。因此，通配符证书的申请要比普通证书申请更加复杂和严格。
 
+`$表示shell, #表示注释, > 表示 数据库`
+
+安装`acme.sh`
+
+```bash
+$ curl https://get.acme.sh | sh
+```
+
 ## 泛域名证书生成
 
 其实github上的操作已经够细致了，这边主要解释利用阿里云的DNSAPI来生产泛域名证书。
