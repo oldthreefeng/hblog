@@ -27,6 +27,13 @@ consul启动
 
 ```bash
 $ nohup consul  agent -server -data-dir=/usr/local/consul-data/  -node=agent-one -bind=0.0.0.0 -bootstrap-expect=1 -client=0.0.0.0 -ui > /usr/local/consul-data/logs/consul.log 2>&1 &
+
+-server 表示是以服务端身份启动
+-bind 表示绑定到哪个ip（有些服务器会绑定多块网卡，可以通过bind参数强制指定绑定的ip）
+-client 指定客户端访问的ip(consul有丰富的api接口，这里的客户端指浏览器或调用方)，0.0.0.0表示不限客户端ip
+-bootstrap-expect=3 表示server集群最低节点数为3，低于这个值将工作不正常(注：类似zookeeper一样，通常集群数为奇数，方便选举，consul采用的是raft算法)
+-data-dir 表示指定数据的存放目录（该目录必须存在）
+-node 表示节点在web ui中显示的名称
 ```
 
 查看当前的members
