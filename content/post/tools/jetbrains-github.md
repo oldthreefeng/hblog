@@ -30,7 +30,7 @@ JetBrains 公司旗下的 IDEA 功能都十分强大，深受各种编程语言�
 
 ## 收到邮件
 
-通过上面的申请地址，我进行了开源许可证的申请，按照所提到的消息，剩下的我只需要等待就 OK 了。我用来申请的开源项目[ginuse](github.com/oldthreefeng/ginuse), 一个使用webhook发送deploy请求的.
+通过上面的申请地址，我进行了开源许可证的申请，按照所提到的消息，剩下的我只需要等待就 OK 了。我用来申请的开源项目[ginuse](https://github.com/oldthreefeng/ginuse), 一个使用webhook发送deploy请求的.
 
 ![](http://pic.fenghong.tech/jetbrains/20191125122853.jpg)
 
