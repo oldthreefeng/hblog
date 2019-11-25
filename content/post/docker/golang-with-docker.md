@@ -1,9 +1,9 @@
 ---
 title: "golang项目docker化"
 date: 2019-11-21T15:42:18+08:00
-lastmod: 2019-21-07T21:54:18+08:00
+lastmod: 2019-11-25T10:54:18+08:00
 tags: [docker,go]
-categories: [server]
+categories: [docker]
 ---
 
 ### golang 项目 docker化
@@ -26,7 +26,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
   
 COPY go.mod go.sum ./
 RUN go mod download
-COPY . .
+COPY ../go .
 
 RUN  GOOS=linux GOARCH=amd64 go build -ldflags "-extldflags -static  -X 'main.Buildstamp=`date -u '+%Y-%m-%d %I:%M:%S%p'`' -X 'main.Githash=`git rev-parse HEAD`' -X 'main.Goversion=`go version`'" -o /service-msite 
 
