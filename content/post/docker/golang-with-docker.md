@@ -26,7 +26,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
   
 COPY go.mod go.sum ./
 RUN go mod download
-COPY ../go .
+COPY . .
 
 RUN  GOOS=linux GOARCH=amd64 go build -ldflags "-extldflags -static  -X 'main.Buildstamp=`date -u '+%Y-%m-%d %I:%M:%S%p'`' -X 'main.Githash=`git rev-parse HEAD`' -X 'main.Goversion=`go version`'" -o /service-msite 
 
