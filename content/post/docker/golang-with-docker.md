@@ -12,7 +12,7 @@ Golang 支持交叉编译，在一个平台上生成另一个平台的可执行�
 
 最终的`dockerfile`  踩坑过程记录。
 
-```dockerfile
+```
 FROM golang:alpine as builder
 
 WORKDIR /go/src/service-msite
