@@ -1,10 +1,7 @@
 ---
 title: "使用shell脚本发送钉钉通知"
-date: "2019-11-29 14:07:32"
-tags: 
-  - ops
-  - jenkins
-  - dingding
+date: 2019-11-29T13:54:18+08:00
+tags: [ops,jenkins,dingding
 categories: [ops,jenkins]
 ---
 
