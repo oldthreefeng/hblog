@@ -38,7 +38,10 @@ categories: [server]
 ## fullchain证书生成
 
 ```bash
-$ echo -n | openssl s_client -host fenghong.tech -port 443 -showcerts 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > fenghong.tech.fullchain.pem
+$ echo -n \
+	| openssl s_client -host fenghong.tech -port 443 -showcerts 2>/dev/null \
+	| sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' \
+	> fenghong.tech.fullchain.pem
 ```
 
 说明：
@@ -59,7 +62,9 @@ sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
 利用`fullchain.pem`证书生成`.pfx`
 
 ```bash
-$ openssl pkcs12 -export -out fenghong.tech.pfx -inkey fenghong.tech.key  -in fenghong.tech.fullchain.pem  -certfile fenghong.tech.fullchain.pem
+$ openssl pkcs12 -export -out fenghong.tech.pfx \
+	-inkey fenghong.tech.key  -in fenghong.tech.fullchain.pem  \
+	-certfile fenghong.tech.fullchain.pem
 ## 要输入密码确认, 证书和key合成在一起了. 所以需要密码保护.
 ```
 
