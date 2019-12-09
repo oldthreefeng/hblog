@@ -47,6 +47,8 @@ $ echo -n \
 说明：
 
 ```
+echo -n 
+	gives a response to the server, so that the connection is released
 -showcerts  
 	显示所有的证书链
 -host       
