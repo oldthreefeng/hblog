@@ -1,7 +1,7 @@
 ---
 title: "搭建https镜像仓库harbor记录"
 date: 2019-11-27T15:22:18+08:00
-lastmod: 2019-11-27T15:22:18+08:00
+lastmod: 2019-12-10T19:07:18+08:00
 tags: [docker,harbor]
 categories: [docker]
 ---
@@ -176,3 +176,11 @@ harbor.fenghong.tech.	600	IN	A	192.168.0.65
 ```
 
 访问网站[harbor](https://harbor.fenghong.tech)
+
+### 部署支持helm的chart仓库
+
+```bash
+$ cd  /home/louis/harbor && sudo  docker-compose down -v 
+$ sudo ./install.sh --with-chartmuseum
+```
+
