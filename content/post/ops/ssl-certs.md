@@ -1,6 +1,6 @@
 ---
 title: "中间证书缺少导致request fail"
-date: "2019-12-05 09:59:32"
+date: "2019-12-09 09:59:32"
 tags: [linux,ssl]
 categories: [server]
 ---
