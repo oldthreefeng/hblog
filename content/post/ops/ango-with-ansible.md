@@ -1,6 +1,6 @@
 ---
 title: "A cli tool to deploy ansible-playbook"
-date: "2019-12-13 09:59:32"
+date: "2019-12-13T09:58:18+08:00"
 tags: [ops,ansible,golang,cobra]
 categories: [ops]
 ---
