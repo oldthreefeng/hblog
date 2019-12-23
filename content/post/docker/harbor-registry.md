@@ -182,5 +182,6 @@ harbor.fenghong.tech.	600	IN	A	192.168.0.65
 ```bash
 $ cd  /home/louis/harbor && sudo  docker-compose down -v 
 $ sudo ./install.sh --with-chartmuseum
+$ sudo  docker-compose up -d 
 ```
 
