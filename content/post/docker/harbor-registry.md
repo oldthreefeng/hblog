@@ -72,7 +72,7 @@ $ tar xf harbor-offline-installer-v1.9.3.tgz
 # 修改配置文件
 $ cd /home/louis/harbor
 $ cp harbor.yml harbor.yml.bak
-$ cat > harbor.yml <<
+$ cat > harbor.yml <<eof
 hostname: harbor.fenghong.tech 
 http:
   port: 81
