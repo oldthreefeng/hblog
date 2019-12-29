@@ -1,6 +1,7 @@
 ---
 title: "mysql执行sql导入数据库中文乱码"
-date: 2019-12-29 11:05:12
+date: 2019-12-29T11:22:18+08:00
+lastmod: 2019-12-29T11:22:18+08:00
 tags: [mysql,coding]
 categories: [mysql]
 ---
