@@ -9,30 +9,30 @@ categories: [hexo]
 ## 常用命令
 
 ```
-]#hexo help #查看帮助
-]#hexo init #初始化一个目录
-]#hexo new "postName" #新建文章
-]#hexo new page "pageName" #新建页面
-]#hexo generate #生成网页，可以在 public 目录查看整个网站的文件
-]#hexo server #本地预览，'Ctrl+C'关闭
-]#hexo deploy #部署.deploy目录
-]#hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**
+]$ hexo help #查看帮助
+]$ hexo init #初始化一个目录
+]$ hexo new "postName" #新建文章
+]$ hexo new page "pageName" #新建页面
+]$ hexo generate #生成网页，可以在 public 目录查看整个网站的文件
+]$ hexo server #本地预览，'Ctrl+C'关闭
+]$ hexo deploy #部署.deploy目录
+]$ hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**
 ```
 ## 常用简写命令
 
 ```
-]#hexo n == hexo new
-]#hexo g == hexo generate
-]#hexo s == hexo server
-]#hexo d == hexo deploy
-]#hexo d -g		#生成加部署
-]#hexo s -g		#预览部署
+]$ hexo n ==> hexo new
+]$ hexo g ==> hexo generate
+]$ hexo s ==> hexo server
+]$ hexo d ==> hexo deploy
+]$ hexo d -g		#生成加部署
+]$ hexo s -g		#预览部署
 ```
 
 ## _config.yml全局配置
 
 ```
-]#vim ~/hexo/_config.yml
+]$ vim ~/hexo/_config.yml
 # Hexo Configuration
 # Docs: http://hexo.io/docs/configuration.html
 # Source: https://github.com/hexojs/hexo/
@@ -114,21 +114,21 @@ deploy:
 - tags
 
 ```
-]#hexo new "我的第一篇博客"
-]#hexo n page 'about'
-]#hexo new "Ansible"
-]#hexo new 'safe'
-]#hexo n page 'categories'
-]#vim ~/source/categories/index.markdown
+]$ hexo new "我的第一篇博客"
+]$ hexo n page 'about'
+]$ hexo new "Ansible"
+]$ hexo new 'safe'
+]$ hexo n page 'categories'
+]$ vim ~/source/categories/index.markdown
 type: "categories"
-]#hexo n page 'tags'
-]#vim ~/source/tags/index.markdown
+]$ hexo n page 'tags'
+]$ vim ~/source/tags/index.markdown
 type: "tags"
 ```
 ## 打赏页面
 
 ```
-]#vim ~/themes/next/_config.yml
+]$ vim ~/themes/next/_config.yml
   #Reward
 reward_comment: 觉得有帮助可以支持作者
 wechatpay: /images/wechatpay.jpg   #相对路径或者绝对路径
@@ -240,7 +240,7 @@ social_icons:
 - links：友情链接
 
 ```
-]#vim ~/themes/next/_config
+]$ vim ~/themes/next/_config.yml
 # Blog rolls
 links_icon: link
 links_title: 看看他们
@@ -271,6 +271,97 @@ post_wordcount:
   min2read: true
 ```
 
+
+## change font by config.yml
+@ ritta.blens@gmail.com 
+first way
+
+```cgo
+$ vim ~/themes/next/_config.yml
+# 在网上找的字体：我用的是Microsoft YaHei
+# you can use https://www.websiteplanet.com/blog/best-free-fonts/ to find you want~
+# "Helvetica Neue"," Helvetica, Arial", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"
+font:
+  enable: true
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host: 
+  # Global font settings used on <body> element.
+    # 全局字体，应用在 body 元素上
+  global:
+    external: true
+    family: Lato
+    size: 16
+
+  # 标题字体 (h1, h2, h3, h4, h5, h6)
+  headings:
+    external: true
+    family: Roboto Slab
+    size:
+
+  # 文章字体
+  posts:
+    external: true
+    family:
+
+  # Logo 字体
+  logo:
+    external: true
+    family: Lobster Two
+    size: 24
+
+  # 代码字体，应用于 code 以及代码块
+  codes:
+    external: true
+    family: Roboto Mono
+```
+
+second way to change your font : 
+
+```cgo
+vim ~/themes/next/_config.yml
+ # For example, you want to put your custom styles file 
+ # outside theme directory in root `source/_data`, set 
+ # `styles: source/_data/styles.styl` 
+ #custom_file_path: 
+   # Default paths: layout/_custom/* 
+   #head: source/_data/head.swig 
+   #header: source/_data/header.swig 
+   #sidebar: source/_data/sidebar.swig 
+  
+   # Default path: source/css/_variables/custom.styl 
+   #variables: source/_data/variables.styl 
+   # Default path: source/css/_mixins/custom.styl 
+   #mixins: source/_data/mixins.styl 
+   # Default path: source/css/_custom/custom.styl 
+   #styles: source/_data/styles.styl 
+```
+you can add your custom styles in `source/_data/styles.styl` according to `~/themes/next/source/css/_variables/base.styl`
+
+```cgo
+vim ~/themes/next/source/css/_variables/base.styl
+// Font families.
+$font-family-chinese      = "PingFang SC", "Microsoft YaHei"
+
+$font-family-base         = $font-family-chinese, sans-serif
+$font-family-base         = get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global')
+
+$font-family-logo         = $font-family-base
+$font-family-logo         = get_font_family('logo'), $font-family-base if get_font_family('logo')
+
+$font-family-headings     = $font-family-base
+$font-family-headings     = get_font_family('headings'), $font-family-base if get_font_family('headings')
+
+$font-family-posts        = $font-family-base
+$font-family-posts        = get_font_family('posts'), $font-family-base if get_font_family('posts')
+
+$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace
+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('codes')
+
+$font-family-icons        = 'FontAwesome'
+
+```
+[linktogithub](https://github.com/theme-next/hexo-theme-next/issues/455)
+
 # 报错
 
 搭建过程中出现了几个报错，统计了一下
@@ -287,16 +378,16 @@ Empty reply from server
 **异常报错2**
 ERROR Deployer not found: git
 ```
-]#npm install hexo-generator-index --save
-]#npm install hexo-generator-archive --save
-]#npm install hexo-generator-category --save
-]#npm install hexo-generator-tag --save
-]#npm install hexo-server --save
-]#npm install hexo-deployer-git --save
-]#npm install hexo-renderer-marked@0.2 --save
-]#npm install hexo-renderer-stylus@0.2 --save
-]#npm install hexo-generator-feed@1 --save
-]#npm install hexo-generator-sitemap@1 --save
+]$ npm install hexo-generator-index --save
+]$ npm install hexo-generator-archive --save
+]$ npm install hexo-generator-category --save
+]$ npm install hexo-generator-tag --save
+]$ npm install hexo-server --save
+]$ npm install hexo-deployer-git --save
+]$ npm install hexo-renderer-marked@0.2 --save
+]$ npm install hexo-renderer-stylus@0.2 --save
+]$ npm install hexo-generator-feed@1 --save
+]$ npm install hexo-generator-sitemap@1 --save
 ```
 
 总结：前前后后话了两天初步搭建起来，查看了很多的大神blog，最后也成功了，比较开心
