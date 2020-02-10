@@ -1,7 +1,7 @@
 ---
 title: "rsync大文件传输导致磁盘异常爆增"
-date: 2020-02-11T11:12:18+08:00
-lastmod: 2020-02-11T11:12:18+08:00
+date: 2020-02-10T11:12:18+08:00
+lastmod: 2020-02-10T11:12:18+08:00
 tags: [rsync,logs]
 categories: [server,ops]
 ---
