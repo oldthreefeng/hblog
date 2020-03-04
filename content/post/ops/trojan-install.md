@@ -21,7 +21,7 @@ An unidentifiable mechanism that helps you bypass GFW。
 ## 原理 
 
 
-![jwkZ9mtbovqGISi](C:\Users\Administrator\Downloads\jwkZ9mtbovqGISi.jpg)
+![jwkZ9mtbovqGISi](http://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
 
 ```
 如图所示，Trojan工作在443端口，所以它会占用443端口，处理来自外界的HTTPS请求，如果是Trojan请求，那么为该请求提供服务，如果不是它就会将该流量转交给Nginx，由Nginx为其提供服务。
@@ -186,7 +186,7 @@ server {
 注意到，第一个和第二个server对应综述部分原理图中的蓝色数据流，第三个server对应综述部分原理图中的红色数据流，综述部分原理图中的绿色数据流不会流到Nginx。
 ```
 
-![jwkZ9mtbovqGISi](C:\Users\Administrator\Downloads\jwkZ9mtbovqGISi.jpg)
+![jwkZ9mtbovqGISi](http://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
 
 如果你本机已经有Nginx服务，那么Nginx配置文件需要做适当修改以和现有服务兼容。
 
