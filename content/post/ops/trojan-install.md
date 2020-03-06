@@ -24,11 +24,17 @@ An unidentifiable mechanism that helps you bypass GFW。
 ![jwkZ9mtbovqGISi](http://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
 
 ```
-如图所示，Trojan工作在443端口，所以它会占用443端口，处理来自外界的HTTPS请求，如果是Trojan请求，那么为该请求提供服务，如果不是它就会将该流量转交给Nginx，由Nginx为其提供服务。
+如图所示，Trojan工作在443端口，所以它会占用443端口，
+处理来自外界的HTTPS请求，如果是Trojan请求，那么为该请求提供服务，
+如果不是它就会将该流量转交给Nginx，由Nginx为其提供服务。
 
-通过这个工作过程可以知道，Trojan的一切表现均与Nginx一致，不会引入额外特征，从而达到无法识别的效果。
+通过这个工作过程可以知道，Trojan的一切表现均与Nginx一致，
+不会引入额外特征，从而达到无法识别的效果。
 
-当然，为了防止恶意探测，我们需要将80端口的流量全部重定向到443端口，并且服务器只暴露80和443端口，80端口还是由nginx管理，但443则由trojan管理，所以要赋予它监听443的权力，这样可以使得服务器与常见的Web服务器表现一致。
+当然，为了防止恶意探测，我们需要将80端口的流量全部重定向到443端口，
+并且服务器只暴露80和443端口，80端口还是由nginx管理，
+但443则由trojan管理，所以要赋予它监听443的权力，
+这样可以使得服务器与常见的Web服务器表现一致。
 ```
 
 ## 前提要求
@@ -123,8 +129,7 @@ $ ./trojan -c config.json &
 
 `nginx`配置
 
-1. 第15行的`server_name`的值`8.12.22.32`改为你自己的IP；
-2. 第17行`www.fenghong.tech`改为自己的域名，注意别填错了。
+主要修改的已经在注释里面写清楚了.
 
 ```
 server {
@@ -179,11 +184,15 @@ server {
 ```
 第一个server接收来自Trojan的流量，与上面Trojan配置文件对应；
 
-第二个server也是接收来自Trojan的流量，但是这个流量尝试使用IP而不是域名访问服务器，所以将其认为是异常流量，并重定向到域名；
+第二个server也是接收来自Trojan的流量，但是这个流量尝试使用IP而不是域名访问服务器，
+所以将其认为是异常流量，并重定向到域名；
 
-第三个server接收除127.0.0.1:80外的所有80端口的流量并重定向到443端口，这样便开启了全站https，可有效的防止恶意探测。
+第三个server接收除127.0.0.1:80外的所有80端口的流量并重定向到443端口，
+这样便开启了全站https，可有效的防止恶意探测。
 
-注意到，第一个和第二个server对应综述部分原理图中的蓝色数据流，第三个server对应综述部分原理图中的红色数据流，综述部分原理图中的绿色数据流不会流到Nginx。
+注意到，第一个和第二个server对应综述部分原理图中的蓝色数据流，
+第三个server对应综述部分原理图中的红色数据流，
+综述部分原理图中的绿色数据流不会流到Nginx。
 ```
 
 ![jwkZ9mtbovqGISi](http://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
@@ -191,11 +200,19 @@ server {
 如果你本机已经有Nginx服务，那么Nginx配置文件需要做适当修改以和现有服务兼容。
 
 ```
-在原服务与Trojan使用同一个域名且原来是监听443端口的情况下，那么需要将你的ssl配置删除并将监听地址改为第一个server监听的地址127.0.0.1:80，然后直接用修改好的server代替上述配置文件中第一个server即可。这样https加密部分将会由Trojan处理之后转发给Nginx而不是由Nginx处理，原来的服务对于客户端来说就没有变化。
+在原服务与Trojan使用同一个域名且原来是监听443端口的情况下，
+那么需要将你的ssl配置删除并将监听地址改为第一个server监听的地址127.0.0.1:80，
+然后直接用修改好的server代替上述配置文件中第一个server即可。
+这样https加密部分将会由Trojan处理之后转发给Nginx而不是由Nginx处理
+原来的服务对于客户端来说就没有变化。
 
-如果原来的服务与Trojan使用不同的域名，建议是修改Trojan与原来的服务使用同一个域名，如果非要使用不同的域名，那么请自己琢磨Nginx的sni，参考连接：[ngx_stream_ssl_preread_module](https://nginx.org/en/docs/stream/ngx_stream_ssl_preread_module.html)。
+如果原来的服务与Trojan使用不同的域名，建议是修改Trojan与原来的服务使用同一个域名，
+如果非要使用不同的域名，那么请自己琢磨Nginx的sni，
+参考连接：[ngx_stream_ssl_preread_module]
+(https://nginx.org/en/docs/stream/ngx_stream_ssl_preread_module.html)。
 
-如果原来的服务是监听80端口，想要继续监听80端口那么直接去除第三个server即可，如果要改为监听443端口参考第1点。
+如果原来的服务是监听80端口，想要继续监听80端口那么直接去除第三个server即可，
+如果要改为监听443端口参考第1点。
 ```
 
 ## Windows或Mac客户端部署
