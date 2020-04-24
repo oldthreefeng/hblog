@@ -57,22 +57,28 @@ mysql监控状态
 
 ### 下载
 
-node_exporter： https://github.com/prometheus/node_exporter/releases
-Prometheus：https://github.com/prometheus/prometheus/releases
-Grafana（选择 Standalone Linux Binaries 版本）：https://grafana.com/grafana/download
+- node_exporter： https://github.com/prometheus/node_exporter/releases
+- Prometheus：https://github.com/prometheus/prometheus/releases
+- Grafana（选择 Standalone Linux Binaries 版本）：https://grafana.com/grafana/download
 
 ### 安装
 
 ```
 $ mkdir /usr/local/monitor
+$ cd /usr/local/monitor ## 保证目录结构如下
+$ tree .
+.
+├── grafana-x.x.x.linux-amd64.tar.gz
+├── node_exporter-x.x.x.linux-amd64.tar.gz
+└── prometheus-x.x.x.linux-amd64.tar.gz
 
 $ wget https://github.com/prometheus/prometheus/releases/download/v2.17.1/prometheus-2.17.1.linux-amd64.tar.gz
 $ wget https://dl.grafana.com/oss/release/grafana-6.7.2.linux-amd64.tar.gz
 $ wget https://github.com/prometheus/node_exporter/releases/download/v1.0.0-rc.0/node_exporter-1.0.0-rc.0.linux-amd64.tar.gz
 
 $ vim install.sh
-for FILE in `ls *.gz`; do tar -xzvf ${FILE} && rm ${FILE}; done
-FILE_LIST="grafana prometheus node_exporter "
+for FILE in `ls`; do tar -xzvf ${FILE} && rm ${FILE}; done
+FILE_LIST="grafana prometheus node_exporter"
 for FILE in ${FILE_LIST}; do rm -rf /usr/local/${FILE} && mv ${FILE}* /usr/local/${FILE}; done
 rm -f /lib/systemd/system/grafana-server.service
 rm -f /lib/systemd/system/prometheus.service
