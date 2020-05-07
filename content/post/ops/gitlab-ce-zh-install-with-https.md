@@ -1,7 +1,7 @@
 ---
 title: "gitlab-ce-zh部署并开启https"
 date: "2020-05-04T11:54:18+08:00"
-tags: [gitlab,git,nginx,ssl]
+tags: [gitlab,git,nginx,ssl,acme]
 categories: [server,ops]
 ---
 
@@ -37,11 +37,11 @@ services:
       GITLAB_OMNIBUS_CONFIG: |
         external_url "https://mxqh168.co"
         nginx['enable'] = true
-		nginx['client_max_body_size'] = '1024m'
-		nginx['redirect_http_to_https'] = true
-		nginx['redirect_http_to_https_port'] = 80
-		nginx['ssl_certificate'] = "/etc/gitlab/ssl/mxqh168.co.cer"
-		nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/mxqh168.co.key"
+        nginx['client_max_body_size'] = '1024m'
+        nginx['redirect_http_to_https'] = true
+        nginx['redirect_http_to_https_port'] = 80
+        nginx['ssl_certificate'] = "/etc/gitlab/ssl/mxqh168.co.cer"
+        nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/mxqh168.co.key"
         gitlab_rails['time_zone'] = 'Asia/Shanghai'
         gitlab_rails['gitlab_shell_ssh_port'] = 22
         gitlab_rails['gitlab_email_enabled'] = true
@@ -84,9 +84,9 @@ server {
 
 	return      301  https://mxqh168.co$request_uri;
 	# 用户ssl证书生成
-    location /.well-known/acme-challenge/ {
-          alias /var/www/ssl/.well-known/acme-challenge/;
-    }
+	location /.well-known/acme-challenge/ {
+		alias /var/www/ssl/.well-known/acme-challenge/;
+	}
 }
 server {
 	listen       443 ssl;
@@ -97,10 +97,9 @@ server {
 	location / {
 		proxy_pass https://gitlab;
 	}
-    location /.well-known/acme-challenge/ {
-        alias /var/www/ssl/.well-known/acme-challenge/;
-    }
-
+	location /.well-known/acme-challenge/ {
+		alias /var/www/ssl/.well-known/acme-challenge/;
+	}
 }
 upstream gitlab {
 	server   127.0.0.1:10443 weight=1 max_fails=2 fail_timeout=30s;
@@ -115,10 +114,15 @@ $ nginx
 采用acme.sh进行免费生成ssl证书. 这里没有用到api生成, 采用的是目录验证方式. 
 
 ```
+$ curl https://get.acme.sh | sh
 $ mkdir /var/www/ssl/.well-known/acme-challenge -p
+## 生成ssl证书.
 $ acme.sh --issue -d mxqh168.co -w /var/www/ssl/
 ## 生成宿主机nginx的ssl证书
-$ acme.sh  --install-cert -d mxqh168.co --key-file /etc/nginx/certs/mxqh168.co.key --fullchain-file /etc/nginx/certs/mxqh168.co.cer --reloadcmd "nginx -s reload"
+$ acme.sh  --install-cert -d mxqh168.co \
+--key-file /etc/nginx/certs/mxqh168.co.key \
+--fullchain-file /etc/nginx/certs/mxqh168.co.cer \
+--reloadcmd "nginx -s reload"
 ## 生成docker容器里面的证书
 $ acme.sh  --install-cert -d mxqh168.co --key-file \
 /home/data/gitlab/config/ssl/mxqh168.co.key --fullchain-file \
