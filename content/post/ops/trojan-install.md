@@ -1,6 +1,7 @@
 ---
 title: "搭建trojan服务"
 date: "2020-03-04T13:54:18+08:00"
+lastmod: "2020-05-13T13:54:18+08:00"
 tags: [trojan,ss,nginx,ssl,acme,chrome]
 categories: [server,ops]
 ---
@@ -255,7 +256,25 @@ http://www.fenghong.tech/OmegaOptions.bak
 
 至此客户端Trojan已经配置完成，尽情享受吧！！！
 
+## Trajon新客户端Trojan-Qt5
+
+Trojan-Qt5是一个专为trojan开发的跨平台的GUI客户端，目前支持Windows、Linux、Mac。软件下载地址：[Trojan-Qt5](https://github.com/TheWanderingCoel/Trojan-Qt5/releases/latest). 以windows为例, 安装完成启动后. 点击菜单栏的：连接》添加》手动。
+
+在弹出的窗口中按照如下的内容填写（其他选项若不懂请保持默认）：
+
+- 配置名称 : 服务器节点的名称，随便填写；
+- 服务器地址： 填写服务器域名；
+- 密钥： 填入你配置trojan时设置的密码，若安装了[Trojan-Panel](https://trojan-tutor.github.io/2019/06/08/p43.html)，则填写用户名和密码，使用英文冒号分隔；
+- 自动化： 勾选后会在程序启动时自动连接该节点，即将当前节点作为默认节点，可按需修改。
+
+修改完参数之后，点击OK完成服务器节点的添加。另外托盘区有两个地方需要求改，如下图所示。另外还可以在设置》常规设置里面配置开机自启。
+
+配置完成后, 可以使用工具栏快捷方式管理节点了，包括连接、断开连接、测速等。点击连接，如果节点信息没有输入错误且软件未报错的情况下，此时已经可以使用任意浏览器访问google了。
+
+![trojan_20200513153157](http://pic.fenghong.tech/trojan/trojan_20200513153157.jpg)
+
 ### 参考
 
 - [TROJAN搭建与BBR魔改开启](https://bk.shunleite.com/post-45.html)
+- [自建梯子教程 --Trojan版本](https://trojan-tutor.github.io/2019/04/10/p41.html)
 
