@@ -25,8 +25,7 @@ yum update libX11-common  libX11  libX11-devel -y
 3：RHSA-2019:2030-中危: python 安全和BUG修复更新
 
 ```
-yum update python -y
-yum update python-libs -y
+yum update python  python-libs -y
 ```
 
 4：RHSA-2019:3976-低危: tcpdump 安全更新
@@ -56,41 +55,15 @@ yum update libarchive -y
 8：RHSA-2019:2169-高危: linux-firmware security,bug fix,和 enhancement update
 
 ```
-yum update -y  iwl2030-firmware 
-iwl6050-firmware 
-iwl5000-firmware
-iwl4965-firmware 
-iwl3945-firmware
-iwl135-firmware
-iwl7260-firmware
-linux-firmware 
-iwl3160-firmware 
-iwl1000-firmware
-iwl6000-firmware 
-iwl105-firmware 
-iwl2000-firmware
-iwl100-firmware 
-iwl6000g2b-firmware 
-iwl6000g2a-firmware 
-iwl5150-firmware
-linux-firmware 
-iwl6050-firmware
-iwl5000-firmware 
-iwl4965-firmware 
-iwl3945-firmware  
-iwl135-firmware  
-iwl7260-firmware  
-linux-firmware 
-iwl3160-firmware  
-iwl1000-firmware 
-iwl6000-firmware  
-iwl105-firmware 
-iwl2000-firmware  
-iwl100-firmware 
-iwl7265-firmware  
-iwl6000g2b-firmware  
-iwl6000g2a-firmware
-iwl6000g2a-firmware 
+yum update -y  iwl2030-firmware iwl6050-firmware iwl5000-firmware \
+iwl4965-firmware iwl3945-firmware iwl135-firmware iwl7260-firmware \
+linux-firmware iwl3160-firmware iwl1000-firmware iwl6000-firmware \
+iwl105-firmware iwl2000-firmware iwl100-firmware  iwl6000g2b-firmware \
+iwl6000g2a-firmware  iwl5150-firmware linux-firmware iwl6050-firmware \
+iwl5000-firmware iwl4965-firmware iwl3945-firmware  iwl135-firmware  \
+iwl7260-firmware iwl3160-firmware  iwl1000-firmware iwl6000-firmware  \
+iwl105-firmware iwl2000-firmware  iwl100-firmware iwl7265-firmware  \
+iwl6000g2b-firmware  iwl6000g2a-firmware iwl6000g2a-firmware 
 ```
 
 9：RHSA-2019:2189-中危: procps-ng 安全和BUG修复更新
@@ -144,24 +117,19 @@ yum update rsyslog -y
 17：RHSA-2019:2077-低危: ntp security,bug fix,和 enhancement update
 
 ```
-yum update ntp -y
-yum update ntpdate -y
+yum update ntp ntpdate -y
 ```
 
 18：RHSA-2020:0124-重要: git 安全更新
 
 ```
-yum update perl-Git -y
-yum update git -y
+yum update perl-Git git -y
 ```
 
 19：RHSA-2019:2091-中危: systemd security,bug fix,和 enhancement update
 
 ```
-yum update systemd-libs -y
-yum update systemd-sysv -y
-yum update libgudev1 -y
-yum update systemd -y
+yum update systemd-libs systemd-sysv  libgudev1  systemd -y
 ```
 
 20：RHSA-2019:2462-高危: ghostscript 安全更新
