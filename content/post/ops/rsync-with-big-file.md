@@ -24,15 +24,15 @@ categories: [server,ops]
 
 报警如下: 
 
-![](http://pic.fenghong.tech/rsync/20200204202921.jpg)
+![](https://pic.fenghong.tech/rsync/20200204202921.jpg)
 
 发现磁盘是在下午16:46开始增长的。 到晚上22:42才发出报警, 这里在负载上面也达到了恐怖的60+。 
 
-![1581306128857](http://pic.fenghong.tech/rsync/1581306128857.png)
+![1581306128857](https://pic.fenghong.tech/rsync/1581306128857.png)
 
 磁盘读写情况: 
 
-![1581306211304](http://pic.fenghong.tech/rsync/1581306211304.png)
+![1581306211304](https://pic.fenghong.tech/rsync/1581306211304.png)
 
 登录服务器后, 先查看磁盘用量, 初步怀疑是日志异常增加导致的.
 
@@ -74,7 +74,7 @@ root      1059  0.0  0.0 108608   208 ?        S    11:21   0:00 rsync --server 
 $ find ./ -name "\.*" -size +10M -type f  | xargs ls -lh
 ```
 
-![](http://pic.fenghong.tech/rsync/rsync-01.png)
+![](https://pic.fenghong.tech/rsync/rsync-01.png)
 
 找到了异常文件的所在位置.  一开始很纳闷, 这些临时文件是怎么产生的.  google之后, 找到答案[rsync原理和工作流程分析](https://www.cnblogs.com/f-ck-need-u/p/7226781.html)
 
@@ -119,4 +119,4 @@ copytruncate
 
 2.增加服务器负载到达10或者cpu到100%的报警通知, 此次告警为磁盘告警才被通知到. 加快处理响应时间.
 
-![1581307240624](http://pic.fenghong.tech/rsync/1581307240624.png)
+![1581307240624](https://pic.fenghong.tech/rsync/1581307240624.png)

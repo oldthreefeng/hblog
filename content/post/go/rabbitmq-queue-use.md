@@ -267,4 +267,4 @@ start send message !
 
 登陆本地的`rabbitmq web`客户端, 查看queue相关信息. 
 
-![](http://pic.fenghong.tech/rabbitmq/rabbit-test-queue.png)
+![](https://pic.fenghong.tech/rabbitmq/rabbit-test-queue.png)
