@@ -105,7 +105,7 @@ welcome to hong~
 
 
 
-![1529463184589](http://pic.fenghong.tech/1529463184589.png)
+![1529463184589](https://pic.fenghong.tech/1529463184589.png)
 
 ​	http响应报文状态的获取查看，利用`curl -I URL`
 
@@ -123,7 +123,7 @@ Content-Type: text/html; charset=UTF-8
 
 
 
-![1529560348043](http://pic.fenghong.tech/1529560348043.png)
+![1529560348043](https://pic.fenghong.tech/1529560348043.png)
 
 协议查看或分析的工具：`tcpdump`, `wireshark`,`tshark`
 
@@ -157,7 +157,7 @@ Content-Type: text/html; charset=UTF-8
 
 ​	HTTP 是一种无状态协议。协议自身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理。这是为了更快地处理大量事务，确保协议的可伸缩性，而特意把 HTTP 协议设计成如此简单的。可是随着 Web 的不断发展，很多业务都需要对通信状态进行保存。于是引入了 Cookie 技术。使用 Cookie 的状态管理Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态。Cookie 会根据从服务器端发送的响应报文内的一个叫做 `Set-Cookie` 的首部字段信息，通知客户端保存Cookie。当下次客户端再往该服务器发送请求时，客户端会自动在请求报文中加入 Cookie 值后发送出去。服务器端发现客户端发送过来的 Cookie 后，会去检查究竟是从哪一个客户端发来的连接请求，然后对比服务器上的记录，最后得到之前的状态信息。
 
-![1529477372443](http://pic.fenghong.tech/1529477372443.png)
+![1529477372443](https://pic.fenghong.tech/1529477372443.png)
 
 ```
 ]# yum install php
@@ -310,7 +310,7 @@ SSLCACertificateFile /etc/httpd/conf.d/ssl/cacert.pem
 
 ​	可能这里在浏览器里，大家看到的提示依旧不安全，这是因为证书没有导入的信任的缘故。导入证书即可变绿加🔒
 
-![1529567635757](http://pic.fenghong.tech/1529567635757.png)
+![1529567635757](https://pic.fenghong.tech/1529567635757.png)
 
 ## http 重定向到 https
 

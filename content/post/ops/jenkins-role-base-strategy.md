@@ -24,7 +24,7 @@ categories: [ops,jenkins]
 
 在系统管理页面点击`Configure Global Security` -->`Access Contral` ,在`Authorization`字段勾选`Role-based  Strategy`
 
-![](http://pic.fenghong.tech/jenkins00.jpg)
+![](https://pic.fenghong.tech/jenkins00.jpg)
 
 > *官网上安全域设置为**Servlet**容器代理，实际操作发现**Jenkins**专有用户数据库也是可以的。*
 
@@ -32,7 +32,7 @@ categories: [ops,jenkins]
 
 *在系统管理页面点击**Manage and Assign Roles**进入角色管理页面：* 
 
-![](http://pic.fenghong.tech/jenkins02.jpg)
+![](https://pic.fenghong.tech/jenkins02.jpg)
 
 这里有两个参数,一个是`Manage Roles`,一个是`Assign Roles`
 
@@ -42,13 +42,13 @@ categories: [ops,jenkins]
 
 在`global roles`添加用户组member.添加`all/read`权限
 
-![](http://pic.fenghong.tech/jenkins03.jpg)
+![](https://pic.fenghong.tech/jenkins03.jpg)
 
 Project角色 就是可以根据不任务前缀 进行隔离，以下创建了 sonar 分组  ,该创建了2个角色，管理员 （具有配置构建等权限）普通角色（只有构建权限）
 
 注意： Pattern 是任务前缀的匹配,必须要写`sonar.*`而不是`sonar`,当然中文也支持.例如任务名 sonar 开头的任务只会被sonar分组的用户看到.
 
-![](http://pic.fenghong.tech/jenkins04.jpg)
+![](https://pic.fenghong.tech/jenkins04.jpg)
 
 然后sava退出.
 
@@ -60,7 +60,7 @@ Project角色 就是可以根据不任务前缀 进行隔离，以下创建了 s
 
 在`Item roles`中,将`sonar`用户加入sonar项目组;将`sonarM`用户加入sonarM项目管理组
 
-![](http://pic.fenghong.tech/jenkins05.jpg)
+![](https://pic.fenghong.tech/jenkins05.jpg)
 
 然后save保存退出.
 
@@ -68,8 +68,8 @@ Project角色 就是可以根据不任务前缀 进行隔离，以下创建了 s
 
 使用sonarM用户登录,只有sonar开头的项目才能被展示,且拥有所有的管理权限
 
-![](http://pic.fenghong.tech/jenkins06.jpg)
+![](https://pic.fenghong.tech/jenkins06.jpg)
 
 使用sonar用户登录,只有build权限
 
-![](http://pic.fenghong.tech/jenkins07.jpg)
+![](https://pic.fenghong.tech/jenkins07.jpg)

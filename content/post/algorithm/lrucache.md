@@ -41,7 +41,7 @@ cache.get(4);       // 返回  4
 - 思路
 
 这个问题可以用哈希表，辅以双向链表记录键值对的信息。所以可以在 `O(1)` 时间内完成 `put` 和 `get` 操作，同时也支持 `O(1)` 删除第一个添加的节点。
-![lruCache](http://pic.fenghong.tech/lrucache.png)
+![lruCache](https://pic.fenghong.tech/lrucache.png)
 如果key存在缓存中, 则获取key的value
 每次数据项被查询到时，都将此数据项移动到链表头部（O(1)的时间复杂度）
 这样，在进行过多次查找操作后，最近被使用过的内容就向链表的头移动，而没有被使用的内容就向链表的后面移动
