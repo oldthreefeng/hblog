@@ -1,6 +1,6 @@
 ---
 title: "记一次kubenetesv1.18.0svc名称空间地址解析异常问题及解决"
-date: 2020-06-115T09:34:18+08:00
+date: 2020-06-15T09:34:18+08:00
 tags: [kubernetes,kuboard,prometheus,ipvs, coredns,kube-proxy]
 categories: [kubernetes]
 ---
