@@ -40,7 +40,52 @@ storageclass.storage.k8s.io/nfs-23   nfs-nfs-23    Delete          WaitForFirstC
 
 prometheus-operator 服务是deployment方式部署，他是整个基础组件的核心，他监控我们自定义的 prometheus 和alertmanager，并生成对应的 statefulset。 就是prometheus和alertmanager服务是通过他部署出来的。
 
-### prometheus-k8s
+### grafana-pvc
+
+创建grafana的存储卷. 并修改`grafana-deployment.yaml`文件, 将官方的`emptyDir`更换为`persistentVolumeClaim`
+
+```
+$ cd kube-prometheus/manifests/
+$ cat > grafana-pvc.yaml <<EOF
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    k8s.kuboard.cn/pvcType: Dynamic
+    pv.kubernetes.io/bind-completed: 'yes'
+    pv.kubernetes.io/bound-by-controller: 'yes'
+  name: grafana
+  namespace: monitoring
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: nfs-23
+status:
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 100Gi
+EOF
+
+$ kubectl apply -f grafana-pvc.yaml
+$ vim grafana-deployment.yaml
+
+...
+	  ##找到 grafana-storage, 添加上面创建的pvc: grafana. 然后保存.
+      volumes:
+      - name: grafana-storage
+          persistentVolumeClaim:
+            claimName: grafana
+...
+
+$ kubectl apply -f grafana-deployment.yaml
+```
+
+### prometheus-k8s持久化
 
 prometheus-server 获取各端点数据并存储与本地，创建方式为自定义资源 crd中的prometheus。 创建自定义资源prometheus后，会启动一个statefulset，即prometheus-server.  默认是没有配置持久化存储的
 
