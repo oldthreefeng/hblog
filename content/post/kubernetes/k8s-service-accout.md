@@ -132,7 +132,7 @@ $ kubectl describe secrets -n huohua $(kubectl -n huohua get secret | awk '/webe
 ```
 $ TOKEN=$(kubectl get secrets -n huohua $(kubectl -n huohua get secret | awk '/weber/{print $1}') -o go-template='{{.data.token}}' | base64 -d)
 $ kubectl config set-credentials huohua-weber --token=$TOKEN
- kubectl config set-cluster ctx-apiserver-cluster.local --insecure-skip-tls-verify=true --server=https://apiserver.cluster.local:6443
+$ kubectl config set-cluster ctx-apiserver-cluster.local --insecure-skip-tls-verify=true --server=https://apiserver.cluster.local:6443
 $ kubectl config set-context ctx-apiserver-cluster.local --cluster=ctx-apiserver-cluster.local --user=huohua-weber
 $ kubectl config use-context ctx-apiserver-cluster.local
 $ kubectl get pods -n huohua
