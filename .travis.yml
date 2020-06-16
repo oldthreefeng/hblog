@@ -19,7 +19,7 @@ after_script:
   - cd ./public
   - git init
   - git config user.name "Louis"
-  - git config user.email "louis@wangke.co"
+  - git config user.email "louisehong4168@gmail.com"
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
