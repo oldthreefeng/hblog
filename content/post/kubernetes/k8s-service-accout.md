@@ -1,7 +1,8 @@
 ---
 title: "kuberbetes serviceaccout访问集群"
 date: 2020-06-06T15:34:18+08:00
-tags: [pv,nfs,pvc,kubernetes]
+lastmod: 2020-06-18T20:34:18+08:00
+tags: [pv,nfs,pvc,kubernetes，rbac]
 categories: [kubernetes]
 ---
 
@@ -160,5 +161,59 @@ users:
 - name: huohua-weber
   user:
     token: eyJhbGciOiJSUzI1NiIsImtpZCI6IndSVmdDbEtrX3VUWDVZTnliYmtOT0RXcWw5TTdnZkgwN3lNQUs2NjBjUWMifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJodW9odWEiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlY3JldC5uYW1lIjoid2ViZXItdG9rZW4tOW0yZDciLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoid2ViZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI5YmNhZDhkMS05YjMyLTQ0MTAtODE3ZC1iY2IzYTNlYTliOWQiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6aHVvaHVhOndlYmVyIn0.OWeAabBT3VVCVhWq99JX84SlgRguJ6MRzkxT4jI0ZZp8Lw8AT1EdtV8rjcLBwdqj_LYHYl8dpGpbUcl1PTmZQ8bDJ3YYwYP-3ND49H360T17DRPk6ds-shs_h0VshxMNCD_UJ4jh-qMzQ9yO7k-xCbPWKrOczwh19A-cDECl2YG1mEUVtsGOb9AMMYgSwvqkHL2g7ASjhA8qvrGdqtRw3YrfNbxkdx6cOE9dRkRTviFNvSvDxBCLAKy5WfIQYr_PCzVcq3641HU6txwcPjJ46_IuH1bYpuluPq5k5vBJ6y7aFGATN1zwwOazHMoF1r8GAZE3IT5vj5sZt6m-lW3zyw
+```
+
+## 补充
+
+上面创建的账号是对huohua这个命名空间有管理权限， 对集群有view权限， 但是对nodes是没有list权限的。
+
+```
+kubectl get nodes
+Error from server (Forbidden): nodes is forbidden: User "system:serviceaccount:huohua:weber" cannot list resource "nodes" in API group "" at the cluster scope
+
+```
+
+> 虽然 view 这个 ClusterRole 具备 nodes list 权限，但由于是通过 RoleBinding 绑定到了 ServiceAccount，实际上只授权了 RoleBinding 所在名称空间的所有 view 的权限。node list 你仍然用不了
+>
+> 解决： 建一个单独的clusterrole，只包含nodes list，get权限，然后用一个cluster rolebinding绑定到你的service account。 即可
+
+```
+$ cat listnode.yaml 
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  # "namespace" omitted since ClusterRoles are not namespaced
+  name: listnode 
+rules:
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["list","get"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: weber-clusterrolebinding-fspji
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: listnode
+subjects:
+  - kind: ServiceAccount
+    name: weber
+    namespace: huohua
+
+$ kubectk apply -f listnode.yaml
+```
+
+这样就可以拿到读取nodes的权限了
+
+```
+$ kubectl get nodes
+NAME           STATUS   ROLES    AGE   VERSION
+huohua-test    Ready    <none>   12d   v1.18.3
+k8s-master     Ready    master   12d   v1.18.3
+server65       Ready    <none>   9d    v1.18.3
+server88-new   Ready    <none>   9d    v1.18.3
 ```
 
