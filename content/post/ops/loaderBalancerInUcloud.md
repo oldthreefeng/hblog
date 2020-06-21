@@ -82,7 +82,7 @@ ERR_TOO_MANY_REDIRECTS
 
 由于nginx的每个`server`段的`location`里均有对ip的访问控制，取消限制或者加入白名单即可:
 
-![504](https://oss.fenghong.tech/1545102659373.png?raw=true)
+![504](https://code.aliyun.com/louisehong/images/raw/master/1545102659373.png?raw=true)
 
 
 - 后端配置443端口证书且配置80端口，并且不配置重定向http-->https。出现以下400报错:

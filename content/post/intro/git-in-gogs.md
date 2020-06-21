@@ -29,7 +29,7 @@ $ ssh-keygen
 - 将自己的公钥添加到git服务器端, 这里使用gogs作为轻量的git服务器端.其他的git服务器端类似.
 - 点击个人`账户设置` ==> `SSH 秘钥` ==> `增加密钥`,将生成的`id_rsa.pub`信息填入保存即可.
 
-![1568185919212](https://oss.fenghong.tech/1568185919212.png)
+![1568185919212](https://code.aliyun.com/louisehong/images/raw/master/1568185919212.png)
 
 ### SourceTree端的配置
 
@@ -45,7 +45,7 @@ If this is unexpected, please log in with password and setup Gogs under another 
 
 打开sourceTree软件,点击主菜单的`工具` ==> `选项` ==> `SSH 密钥`地址,`SSH客户端`选择`OpenSSH`.
 
-![1568186314623](https://oss.fenghong.tech/1568186314623.png)
+![1568186314623](https://code.aliyun.com/louisehong/images/raw/master/1568186314623.png)
 
 - 配置仓库
 

@@ -49,7 +49,7 @@ LISTEN     0      128       [::]:18188                 [::]:*
 
 windows的网易云音乐客户端配置, 点击确定重启客户端即可白嫖...
 
-![](https://oss.fenghong.tech/tools/wangyiyun_20200615172435.jpg)
+![](https://code.aliyun.com/louisehong/images/raw/master/tools/wangyiyun_20200615172435.jpg)
 
 安卓手机设置
 

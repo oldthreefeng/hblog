@@ -13,7 +13,7 @@ categories: [kubernetes]
 
 > 获取内网凭证. 创建集群大概5分钟左右, 然后去集群页面获取凭证
 
-![1572608654035](https://oss.fenghong.tech/k8s/20191101194247.png)
+![1572608654035](https://code.aliyun.com/louisehong/images/raw/master/k8s/20191101194247.png)
 
 > 管理主机为同VPC下的一台Uhost.
 
@@ -166,11 +166,11 @@ docker run  --privileged \
 
 配置`webhook`, 采用gogs的插件, `branch` 选择为master, 则只构建master的推送, 其他都不进行构建.
 
-![1572620352737](https://oss.fenghong.tech/k8s/1572620352737.png)
+![1572620352737](https://code.aliyun.com/louisehong/images/raw/master/k8s/1572620352737.png)
 
 jenkins里面的job部署简易脚本. 带回滚的版本, 如果镜像更新失败, 则打印生成的容器100行日志.并执行undo回滚操作.
 
-![1572619800580](https://oss.fenghong.tech/k8s/1572619800580.png)
+![1572619800580](https://code.aliyun.com/louisehong/images/raw/master/k8s/1572619800580.png)
 
 ```bash
 #!/bin/bash
@@ -264,11 +264,11 @@ deployment "hello-world-deployment" successfully rolled out
 Finished: SUCCESS
 ```
 
-![1572619225378](https://oss.fenghong.tech/k8s/1572619225378.png)
+![1572619225378](https://code.aliyun.com/louisehong/images/raw/master/k8s/1572619225378.png)
 
 推送一个push-trigger,立马就更新了. 
 
-![1572619287421](https://oss.fenghong.tech/k8s/1572619287421.png)
+![1572619287421](https://code.aliyun.com/louisehong/images/raw/master/k8s/1572619287421.png)
 
 源码仓库在[gogs.wangke.co](https://gogs.wangke.co/go/uk8s-test)
 

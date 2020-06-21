@@ -26,11 +26,11 @@ categories: [server]
 
 ## FRP架构
 
- ![architecture](https://oss.fenghong.tech/frp/architecture.png) 
+ ![architecture](https://code.aliyun.com/louisehong/images/raw/master/frp/architecture.png) 
 
 ## 内网使用websocket逻辑图
 
- ![architecture](https://oss.fenghong.tech/frp/wss.jpg)
+ ![architecture](https://code.aliyun.com/louisehong/images/raw/master/frp/wss.jpg)
 
 内部机器部署外网访问, 必要的就是一个公网ip + frp , 后面就是正常的nginx做web应用服务即可.
 
