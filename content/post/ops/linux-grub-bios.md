@@ -47,7 +47,7 @@ title CentOS (2.6.32-431.el6.x86_64)
 
 我们这边主要是stage1方式缺失. 需要采用新的光盘引导进入`resuce` 救援模式
 
-![image-20191231123135464](https://pic.fenghong.tech/linux/image-20191231123135464.png)
+![image-20191231123135464](https://oss.fenghong.tech/linux/image-20191231123135464.png)
 
 ```
 Resuce installed system

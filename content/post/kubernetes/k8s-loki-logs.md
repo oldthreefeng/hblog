@@ -35,7 +35,7 @@ Loki由3个组成部分组成：
 
 ## 示意图
 
-![](https://pic.fenghong.tech/k8s/k8s_20200619204216.jpg)
+![](https://oss.fenghong.tech/k8s/k8s_20200619204216.jpg)
 
 ## 部署Loki
 

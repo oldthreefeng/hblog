@@ -68,46 +68,46 @@ categories: [games]
 
 本身没有任何能力，一觉睡到天亮却要考虑很多事情。平民会接收到真假混杂的信息，需要从中分辨和判断出正确的信息。[简介玩法](https://switchmag.co/%e7%8b%bc%e4%ba%ba%e6%9d%80%e5%8f%91%e8%a8%80%e7%b3%bb%e5%88%97-%e5%b9%b3%e6%b0%91/)
 
-![](https://pic.fenghong.tech/pingming.jpg?raw=true)
+![](https://oss.fenghong.tech/pingming.jpg?raw=true)
 
 - 狼人
 
 每天晚上会残忍地杀害一个村民，到了白天，狼人要假扮村民隐藏自己的身份，故意误导或陷害其他村民。
 
-![](https://pic.fenghong.tech/langren.jpg?raw=true)
+![](https://oss.fenghong.tech/langren.jpg?raw=true)
 
 - 预言家
 
 每晚预言家可以窥视一个玩家的真实身份，是村庄里的灵魂人物。预言家要思考如何帮助村民的同时又不被狼人发现自己的身份。[高阶玩法请看](https://switchmag.co/%e7%8b%bc%e4%ba%ba%e6%9d%80%e5%8f%91%e8%a8%80%e7%b3%bb%e5%88%97%ef%bc%9a%e9%a2%84%e8%a8%80%e5%ae%b6%e7%af%87/)
 
-![](https://pic.fenghong.tech/yuyanjia.jpg?raw=true)
+![](https://oss.fenghong.tech/yuyanjia.jpg?raw=true)
 
 - 女巫
 
 女巫拥有两瓶药，解药可以救活一名当晚被狼人杀害的玩家，毒药可以毒杀一名玩家，女巫在每天晚上最多使用一瓶药，女巫不可自救。[高阶玩法请看](https://switchmag.co/狼人杀发言系列：女巫篇/)
 
-![](https://pic.fenghong.tech/nvwu.jpg?raw=true)
+![](https://oss.fenghong.tech/nvwu.jpg?raw=true)
 
 - 猎人
 
 当猎人被狼人杀害或被村民处决时，他可以射杀任意一个玩家。
 但当猎人由于意外死亡（如女巫的毒药或者被殉情而死）他不可在死前射出子弹。
 
-![](https://pic.fenghong.tech/lieren.jpg?raw=true)
+![](https://oss.fenghong.tech/lieren.jpg?raw=true)
 
 - 守卫
 
 每晚守卫暗中指定一个玩家，该玩家当晚会受到保护，不会被狼人杀害，守卫不能连续两晚守卫同一个人，守卫可以守卫自己。
 （注：部分局规定若女巫的救人与守卫守护的人为同一人，则判定该位玩家因同守同救而死亡）
 
-![](https://pic.fenghong.tech/shouwei.jpg?raw=true)
+![](https://oss.fenghong.tech/shouwei.jpg?raw=true)
 
 - 白痴
 
 白痴若是被投票出局，可以翻开自己的身份牌，免疫此次放逐，之后可以正常发言，但不能投票，狼人仍需要击杀他一次才能让他死亡。
 但若是白痴因非投票原因死亡，则无法发动技能，立即死亡。[高阶玩法](https://switchmag.co/%e7%99%bd%e7%97%b4%e5%bd%93%e9%81%93%ef%bc%8c%e8%b0%81%e4%b8%8e%e4%ba%89%e9%94%8b/)
 
-![](https://pic.fenghong.tech/baizi.jpg?raw=true)
+![](https://oss.fenghong.tech/baizi.jpg?raw=true)
 
 ## 术语
 

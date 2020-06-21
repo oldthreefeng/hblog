@@ -15,7 +15,7 @@ categories: [server,ops]
 
 ## 效果成品图
 
-![node_export](https://pic.fenghong.tech/gitlab/gitlab_20200507153757.jpg)
+![node_export](https://oss.fenghong.tech/gitlab/gitlab_20200507153757.jpg)
 
 ## 部署
 

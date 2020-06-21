@@ -12,7 +12,7 @@ categories: [tools]
 
 ## 上图
 
-![img](https://pic.fenghong.tech/ops-new-fish.png)
+![img](https://oss.fenghong.tech/ops-new-fish.png)
 
 ## 参考
 

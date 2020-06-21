@@ -13,7 +13,7 @@ categories: [living]
 >
 > 马来西亚是一个新兴的多元化经济国家。经济在1990年代突飞猛进，为“亚洲四小虎”国家之一。马来西亚已成为亚洲地区引人注目的多元化新兴工业国家和世界新兴市场经济体。旅游业是马来西亚的第三大外汇收入来源，知识经济服务业也在同步扩张.
 
-![img](https://pic.fenghong.tech/Malaysia.jpg)
+![img](https://oss.fenghong.tech/Malaysia.jpg)
 
 ## 出发准备篇 ##
 

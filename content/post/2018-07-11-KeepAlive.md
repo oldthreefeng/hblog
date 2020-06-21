@@ -77,7 +77,7 @@ Failback：故障节点重新上线，故障切回
 
 - keepalived的模型结构如下：
 
-![1531276298776](https://pic.fenghong.tech/1531276298776.png)
+![1531276298776](https://oss.fenghong.tech/1531276298776.png)
 
 
 
@@ -321,7 +321,7 @@ vrrp_instance VI_1 {
 
 拓扑图：
 
-![1531399406134](https://pic.fenghong.tech/1531399406134.png)
+![1531399406134](https://oss.fenghong.tech/1531399406134.png)
 
 环境：
 

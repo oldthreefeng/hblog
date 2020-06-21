@@ -29,7 +29,7 @@ categories: [lvs]
   分布式存储：云盘,fastdfs
   分布式计算：hadoop，Spark
 
-![1530261982946](https://pic.fenghong.tech/1530261982946.png)
+![1530261982946](https://oss.fenghong.tech/1530261982946.png)
 
 ## cluster 分类
 
@@ -92,7 +92,7 @@ netfilter：内核空间上的框架
 转发： PREROUTING --> FORWARD --> POSTROUTING
 DNAT：目标地址转换； PREROUTING
 ```
-![1530261982946](https://pic.fenghong.tech/LVS_Cluster.png)
+![1530261982946](https://oss.fenghong.tech/LVS_Cluster.png)
 
 - lvs集群类型中的术语：
 ```
@@ -130,7 +130,7 @@ RIP: Real server IP
 3. 支持端口映射，可修改请求报文的目标PORT
 4. VS必须是Linux系统，RS可以是任意OS系统
 
-![1530265255549](https://pic.fenghong.tech/1530265255549.png)
+![1530265255549](https://oss.fenghong.tech/1530265255549.png)
 
 ## LVS-DR
 
@@ -165,7 +165,7 @@ arptables -A OUT -s $VIP -j mangle --mangle-ip-s $RIP
 6. 不支持端口映射（端口不能修败）
 7. RS可使用大多数OS系统
 
-![LVS_dr](https://pic.fenghong.tech/LVS_dr.png)
+![LVS_dr](https://oss.fenghong.tech/LVS_dr.png)
 
 ## lvs-tun
 

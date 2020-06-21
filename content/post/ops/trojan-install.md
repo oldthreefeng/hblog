@@ -22,7 +22,7 @@ An unidentifiable mechanism that helps you bypass GFW。
 ## 原理 
 
 
-![jwkZ9mtbovqGISi](https://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
+![jwkZ9mtbovqGISi](https://oss.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
 
 ```
 如图所示，Trojan工作在443端口，所以它会占用443端口，
@@ -196,7 +196,7 @@ server {
 综述部分原理图中的绿色数据流不会流到Nginx。
 ```
 
-![jwkZ9mtbovqGISi](https://pic.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
+![jwkZ9mtbovqGISi](https://oss.fenghong.tech/trojan/jwkZ9mtbovqGISi.jpg)
 
 如果你本机已经有Nginx服务，那么Nginx配置文件需要做适当修改以和现有服务兼容。
 
@@ -271,7 +271,7 @@ Trojan-Qt5是一个专为trojan开发的跨平台的GUI客户端，目前支持W
 
 配置完成后, 可以使用工具栏快捷方式管理节点了，包括连接、断开连接、测速等。点击连接，如果节点信息没有输入错误且软件未报错的情况下，此时已经可以使用任意浏览器访问google了。
 
-![trojan_20200513153157](https://pic.fenghong.tech/trojan/trojan_20200513153157.jpg)
+![trojan_20200513153157](https://oss.fenghong.tech/trojan/trojan_20200513153157.jpg)
 
 ### 参考
 

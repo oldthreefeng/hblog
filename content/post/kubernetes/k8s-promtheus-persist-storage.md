@@ -13,7 +13,7 @@ categories: [kubernetes]
 
 ## PV示意图
 
-![](https://pic.fenghong.tech/k8s/pvc_20200611162616.jpg)
+![](https://oss.fenghong.tech/k8s/pvc_20200611162616.jpg)
 
 ## 部署kube-prometheus
 

@@ -18,11 +18,11 @@ categories: [server,ops]
 
 服务器基本状态效果
 
-![node_export](https://pic.fenghong.tech/prometheus/node_20200408170900.jpg)
+![node_export](https://oss.fenghong.tech/prometheus/node_20200408170900.jpg)
 
 mysql监控状态
 
-![node_export](https://pic.fenghong.tech/prometheus/mysql-20200408165104.jpg)
+![node_export](https://oss.fenghong.tech/prometheus/mysql-20200408165104.jpg)
 
 ## 前置知识
 
@@ -328,11 +328,11 @@ Http URL 中填入 `http://localhost:9090` ，也就是 `prometheus` 提供的�
 
 然后把鼠标挪到`左上角的 +` 上，注意是挪上去，然后在弹出的菜单中点击 `Import`。选择id为`7362`.  
 
-![node_export](https://pic.fenghong.tech/prometheus/dashboard_20200408174127.jpg)
+![node_export](https://oss.fenghong.tech/prometheus/dashboard_20200408174127.jpg)
 
 选择Folder为general。 Prometheus选择Prometheus， 再导入即可。
 
-![node_export](https://pic.fenghong.tech/prometheus/import_20200408174759.jpg)
+![node_export](https://oss.fenghong.tech/prometheus/import_20200408174759.jpg)
 
 至此， 基本结束。
 

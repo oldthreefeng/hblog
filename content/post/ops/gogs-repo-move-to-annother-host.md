@@ -119,7 +119,7 @@ $ mysql -p$yourpassword  < gogs.sql
 - 应用的基本设置安装`app.ini`文件填写，也可以随便填写，后面需要可以把以前的配置文件按需复制
 - 管理员配置直接跳过，因为数据库里面的数据已经存在了管理员，如果你需要重置管理员，那自己随意。
 
-![](https://pic.fenghong.tech/gogsinstall.png)
+![](https://oss.fenghong.tech/gogsinstall.png)
 
 - 点击跳过管理员后，直接会跳转到登陆界面，登陆，用户名密码为你前系统的用户名密码，没有改变。可能这里有人会说，你的repo数据还没有导入呢，对，这点击进入的任何repo有关的都是报的500，找不到。
 
@@ -160,7 +160,7 @@ I suppose you copied the repositories from another Gogs installation.
 Go to admin dashboard and do:
 ```
 
-![image](https://pic.fenghong.tech/pusherror.png)
+![image](https://oss.fenghong.tech/pusherror.png)
 
 ### 22端口为git的访问失败
 

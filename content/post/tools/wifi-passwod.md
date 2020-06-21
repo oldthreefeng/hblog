@@ -23,19 +23,19 @@ $ sudo security find-generic-password -ga "替换成wifi名称" | grep password
 
 打开应用程序中『实用工具』文件夹中的『钥匙串访问』
 
-![查看MAC系统中原来已经保存的wifi密码](https://pic.fenghong.tech/tools/2016050520582085637.png)
+![查看MAC系统中原来已经保存的wifi密码](https://oss.fenghong.tech/tools/2016050520582085637.png)
 
 
 
 选择左侧的『密码』，就可以看到右侧有『airport网络密码』了
 
-![查看MAC系统中原来已经保存的wifi密码](https://pic.fenghong.tech/tools/2016050521005138149.png)
+![查看MAC系统中原来已经保存的wifi密码](https://oss.fenghong.tech/tools/2016050521005138149.png)
 
 
 
 双击需要查看密码的wifi名称，勾选下方的『显示密码』。根据提示输入系统密码后，wifi的密码就显示出来了。
 
-![查看MAC系统中原来已经保存的wifi密码](https://pic.fenghong.tech/tools/2016050521035114828.png)
+![查看MAC系统中原来已经保存的wifi密码](https://oss.fenghong.tech/tools/2016050521035114828.png)
 
 ## Windows查看历史wifi密码
 
