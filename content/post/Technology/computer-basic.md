@@ -65,7 +65,7 @@ categories: [ops]
 
 如果一个进程在用户态需要使用内核态的功能，就进行系统调用从而陷入内核，由操作系统代为完成。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/tGPV0.png" width="600"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/tGPV0.png" width="600"/> </div><br>
 
 Linux 的系统调用主要有以下这些：
 
@@ -94,7 +94,7 @@ Linux 的系统调用主要有以下这些：
 
 因为需要频繁地在用户态和核心态之间进行切换，所以会有一定的性能损失。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/2_14_microkernelArchitecture.jpg"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/2_14_microkernelArchitecture.jpg"/> </div><br>
 
 ## 中断分类
 
@@ -122,7 +122,7 @@ Linux 的系统调用主要有以下这些：
 
 下图显示了 4 个程序创建了 4 个进程，这 4 个进程可以并发地执行。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/a6ac2b08-3861-4e85-baa8-382287bfee9f.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/a6ac2b08-3861-4e85-baa8-382287bfee9f.png"/> </div><br>
 
 ### 2. 线程
 
@@ -132,7 +132,7 @@ Linux 的系统调用主要有以下这些：
 
 QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 HTTP 请求线程、事件响应线程、渲染线程等等，线程的并发执行使得在浏览器中点击一个新链接从而发起 HTTP 请求时，浏览器还可以响应用户的其它事件。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/3cd630ea-017c-488d-ad1d-732b4efeddf5.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/3cd630ea-017c-488d-ad1d-732b4efeddf5.png"/> </div><br>
 
 ### 3. 区别
 
@@ -154,7 +154,7 @@ QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 H
 
 ## 进程状态的切换
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/ProcessState.png" width="500"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/ProcessState.png" width="500"/> </div><br>
 
 - 就绪状态（ready）：等待被调度
 - 运行状态（running）
@@ -202,7 +202,7 @@ QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 H
 - 因为进程切换都要保存进程的信息并且载入新进程的信息，如果时间片太小，会导致进程切换得太频繁，在进程切换上就会花过多时间。
 - 而如果时间片过长，那么实时性就不能得到保证。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/8c662999-c16c-481c-9f40-1fdba5bc9167.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/8c662999-c16c-481c-9f40-1fdba5bc9167.png"/> </div><br>
 
 **2.2 优先级调度** 
 
@@ -220,7 +220,7 @@ QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 H
 
 可以将这种调度算法看成是时间片轮转调度算法和优先级调度算法的结合。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/042cf928-3c8e-4815-ae9c-f2780202c68f.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/042cf928-3c8e-4815-ae9c-f2780202c68f.png"/> </div><br>
 
 ### 3. 实时系统
 
@@ -539,7 +539,7 @@ void reader()
 
 ### 2. 哲学家进餐问题
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/a9077f06-7584-4f2b-8c20-3a8e46928820.jpg"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/a9077f06-7584-4f2b-8c20-3a8e46928820.jpg"/> </div><br>
 
 五个哲学家围着一张圆桌，每个哲学家面前放着食物。哲学家的生活有两种交替活动：吃饭以及思考。当一个哲学家吃饭时，需要先拿起自己左右两边的两根筷子，并且一次只能拿起一根筷子。
 
@@ -633,7 +633,7 @@ int pipe(int fd[2]);
 - 只支持半双工通信（单向交替传输）；
 - 只能在父子进程中使用。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/53cd9ade-b0a6-4399-b4de-7f1fbd06cdfb.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/53cd9ade-b0a6-4399-b4de-7f1fbd06cdfb.png"/> </div><br>
 
 ### 2. FIFO
 
@@ -647,7 +647,7 @@ int mkfifoat(int fd, const char *path, mode_t mode);
 
 FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户进程和服务器进程之间传递数据。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/2ac50b81-d92a-4401-b9ec-f2113ecc3076.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/2ac50b81-d92a-4401-b9ec-f2113ecc3076.png"/> </div><br>
 
 ### 3. 消息队列
 
@@ -677,7 +677,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 ## 必要条件
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/c037c901-7eae-4e31-a1e4-9d41329e5c3e.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/c037c901-7eae-4e31-a1e4-9d41329e5c3e.png"/> </div><br>
 
 - 互斥：每个资源要么已经分配给了一个进程，要么就是可用的。
 - 占有和等待：已经得到了某个资源的进程可以再请求新的资源。
@@ -709,7 +709,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 ### 1. 每种类型一个资源的死锁检测
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/b1fa0453-a4b0-4eae-a352-48acca8fff74.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/b1fa0453-a4b0-4eae-a352-48acca8fff74.png"/> </div><br>
 
 上图为资源分配图，其中方框表示资源，圆圈表示进程。资源指向进程表示该资源已经分配给该进程，进程指向资源表示进程请求获取该资源。
 
@@ -719,7 +719,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 ### 2. 每种类型多个资源的死锁检测
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png"/> </div><br>
 
 上图中，有三个进程四个资源，每个数据代表的含义如下：
 
@@ -768,7 +768,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 ### 1. 安全状态
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/ed523051-608f-4c3f-b343-383e2d194470.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/ed523051-608f-4c3f-b343-383e2d194470.png"/> </div><br>
 
 图 a 的第二列 Has 表示已拥有的资源数，第三列 Max 表示总共需要的资源数，Free 表示还有可以使用的资源数。从图 a 开始出发，先让 B 拥有所需的所有资源（图 b），运行结束后释放 B，此时 Free 变为 5（图 c）；接着以同样的方式运行 C 和 A，使得所有进程都能成功运行，因此可以称图 a 所示的状态时安全的。
 
@@ -780,13 +780,13 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 一个小城镇的银行家，他向一群客户分别承诺了一定的贷款额度，算法要做的是判断对请求的满足是否会进入不安全状态，如果是，就拒绝请求；否则予以分配。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png"/> </div><br>
 
 上图 c 为不安全状态，因此算法会拒绝之前的请求，从而避免进入图 c 中的状态。
 
 ### 3. 多个资源的银行家算法
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png"/> </div><br>
 
 上图中有五个进程，四个资源。左边的图表示已经分配的资源，右边的图表示还需要分配的资源。最右边的 E、P 以及 A 分别表示：总资源、已分配资源以及可用资源，注意这三个为向量，而不是具体数值，例如 A=(1020)，表示 4 个资源分别还剩下 1/0/2/0。
 
@@ -808,7 +808,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 从上面的描述中可以看出，虚拟内存允许程序不用将地址空间中的每一页都映射到物理内存，也就是说一个程序不需要全部调入内存就可以运行，这使得有限的内存运行大程序成为可能。例如有一台计算机可以产生 16 位地址，那么一个程序的地址空间范围是 0\~64K。该计算机只有 32KB 的物理内存，虚拟内存技术允许该计算机运行一个 64K 大小的程序。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/7b281b1e-0595-402b-ae35-8c91084c33c1.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/7b281b1e-0595-402b-ae35-8c91084c33c1.png"/> </div><br>
 
 ## 分页系统地址映射
 
@@ -818,7 +818,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 下图的页表存放着 16 个页，这 16 个页需要用 4 个比特位来进行索引定位。例如对于虚拟地址（0010 000000000100），前 4 位是存储页面号 2，读取表项内容为（110 1），页表项最后一位表示是否存在于内存中，1 表示存在。后 12 位存储偏移量。这个页对应的页框的地址为 （110 000000000100）。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" width="500"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" width="500"/> </div><br>
 
 ## 页面置换算法
 
@@ -854,7 +854,7 @@ FIFO 常用于客户-服务器应用程序中，FIFO 用作汇聚点，在客户
 
 <div align="center"><img src="https://latex.codecogs.com/gif.latex?4，7，0，7，1，0，1，2，1，2，6"/></div> <br>
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/eb859228-c0f2-4bce-910d-d9f76929352b.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/eb859228-c0f2-4bce-910d-d9f76929352b.png"/> </div><br>
 
 ### 3. 最近未使用
 
@@ -885,7 +885,7 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 
 当页面被访问 (读或写) 时设置该页面的 R 位为 1。需要替换的时候，检查最老页面的 R 位。如果 R 位是 0，那么这个页面既老又没有被使用，可以立刻置换掉；如果是 1，就将 R 位清 0，并把该页面放到链表的尾端，修改它的装入时间使它就像刚装入的一样，然后继续从链表的头部开始搜索。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/ecf8ad5d-5403-48b9-b6e7-f2e20ffe8fca.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/ecf8ad5d-5403-48b9-b6e7-f2e20ffe8fca.png"/> </div><br>
 
 ### 6. 时钟
 
@@ -893,7 +893,7 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 
 第二次机会算法需要在链表中移动页面，降低了效率。时钟算法使用环形链表将页面连接起来，再使用一个指针指向最老的页面。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/5f5ef0b6-98ea-497c-a007-f6c55288eab1.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/5f5ef0b6-98ea-497c-a007-f6c55288eab1.png"/> </div><br>
 
 ## 分段
 
@@ -901,11 +901,11 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 
 下图为一个编译器在编译过程中建立的多个表，有 4 个表是动态增长的，如果使用分页系统的一维地址空间，动态增长的特点会导致覆盖问题的出现。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/22de0538-7c6e-4365-bd3b-8ce3c5900216.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/22de0538-7c6e-4365-bd3b-8ce3c5900216.png"/> </div><br>
 
 分段的做法是把每个表分成段，一个段构成一个独立的地址空间。每个段的长度可以不同，并且可以动态增长。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png"/> </div><br>
 
 ## 段页式
 
@@ -932,7 +932,7 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 - 制动手臂（Actuator arm）：用于在磁道之间移动磁头；
 - 主轴（Spindle）：使整个盘面转动。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/014fbc4d-d873-4a12-b160-867ddaed9807.jpg"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/014fbc4d-d873-4a12-b160-867ddaed9807.jpg"/> </div><br>
 
 ## 磁盘调度算法
 
@@ -960,7 +960,7 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 
 虽然平均寻道时间比较低，但是不够公平。如果新到达的磁道请求总是比一个在等待的磁道请求近，那么在等待的磁道请求会一直等待下去，也就是出现饥饿现象。具体来说，两端的磁道请求更容易出现饥饿现象。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/4e2485e4-34bd-4967-9f02-0c093b797aaa.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/4e2485e4-34bd-4967-9f02-0c093b797aaa.png"/> </div><br>
 
 ### 3. 电梯算法
 
@@ -972,7 +972,7 @@ FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问
 
 因为考虑了移动方向，因此所有的磁盘请求都会被满足，解决了 SSTF 的饥饿问题。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/271ce08f-c124-475f-b490-be44fedc6d2e.png"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/271ce08f-c124-475f-b490-be44fedc6d2e.png"/> </div><br>
 
 # 六、链接
 
@@ -998,7 +998,7 @@ gcc -o hello hello.c
 
 这个过程大致如下：
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/b396d726-b75f-4a32-89a2-03a7b6e19f6f.jpg" width="800"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/b396d726-b75f-4a32-89a2-03a7b6e19f6f.jpg" width="800"/> </div><br>
 
 - 预处理阶段：处理以 # 开头的预处理命令；
 - 编译阶段：翻译成汇编文件；
@@ -1012,7 +1012,7 @@ gcc -o hello hello.c
 - 符号解析：每个符号对应于一个函数、一个全局变量或一个静态变量，符号解析的目的是将每个符号引用与一个符号定义关联起来。
 - 重定位：链接器通过把每个符号定义与一个内存位置关联起来，然后修改所有对这些符号的引用，使得它们指向这个内存位置。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/47d98583-8bb0-45cc-812d-47eefa0a4a40.jpg"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/47d98583-8bb0-45cc-812d-47eefa0a4a40.jpg"/> </div><br>
 
 ## 目标文件
 
@@ -1032,7 +1032,7 @@ gcc -o hello hello.c
 - 在给定的文件系统中一个库只有一个文件，所有引用该库的可执行目标文件都共享这个文件，它不会被复制到引用它的可执行文件中；
 - 在内存中，一个共享库的 .text 节（已编译程序的机器代码）的一个副本可以被不同的正在运行的进程共享。
 
-<div align="center"> <img src="https://code.aliyun.com/louisehong/images/raw/master/76dc7769-1aac-4888-9bea-064f1caa8e77.jpg"/> </div><br>
+<div align="center"> <img src="https://oss.fenghong.tech/76dc7769-1aac-4888-9bea-064f1caa8e77.jpg"/> </div><br>
 
 # 参考资料
 

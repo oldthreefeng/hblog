@@ -25,13 +25,13 @@ categories: [server]
 
  一般情况下系统可以通过URL自行完成中间证书的下载，如Windows、iOS、OSX（macOS Sierra）都支持这种方式，但Android和Java客户端不支持自行下载，还有一种情况就是无法访问根证书地址的情况如内网 .
 
-![](https://code.aliyun.com/louisehong/images/raw/master/ssl/sslextradowanload.jpg)
+![](https://oss.fenghong.tech/ssl/sslextradowanload.jpg)
 
 ### 服务器推送中间证书
 
  除了通过证书中URL下载中间证书外，还可以通过服务器向客户端主动推送中间证书，这样即可兼容系统或客户端不支持自动下载中间证书的情况 。
 
-![](https://code.aliyun.com/louisehong/images/raw/master/ssl/sslsentbyserver.jpg)
+![](https://oss.fenghong.tech/ssl/sslsentbyserver.jpg)
 
  至此微信小程序接口报错的问题原因即暴露出来了，是系统或客户端不支持自动下载中间证书，其实在大家完成证书部署之后应该检测一下这样更保险[证书检测]( https://www.ssllabs.com/ssltest/analyze.html )
 

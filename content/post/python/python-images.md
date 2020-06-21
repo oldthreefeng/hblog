@@ -15,9 +15,9 @@ numpy（Numerical Python）提供了python对多维数组对象的支持：ndarr
 
 - 图像灰度处理
 
-![](https://code.aliyun.com/louisehong/images/raw/master/1.jpg?raw=true)
+![](https://oss.fenghong.tech/1.jpg?raw=true)
 
-![](https://code.aliyun.com/louisehong/images/raw/master/2.jpg?raw=true)
+![](https://oss.fenghong.tech/2.jpg?raw=true)
 
 ```
 from PIL import Image
@@ -34,9 +34,9 @@ im.save('2.jpg')
 
 - 图像的手绘处理
 
-![](https://code.aliyun.com/louisehong/images/raw/master/varto.jpg?raw=true)
+![](https://oss.fenghong.tech/varto.jpg?raw=true)
 
-![](https://code.aliyun.com/louisehong/images/raw/master/transfor.jpg?raw=true)
+![](https://oss.fenghong.tech/transfor.jpg?raw=true)
 
 ```
 # # 相片变为手绘效果图片
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
 很容易画出一张图
 
-![yuxuan](https://code.aliyun.com/louisehong/images/raw/master/yuxuan.png?raw=true)
+![yuxuan](https://oss.fenghong.tech/yuxuan.png?raw=true)
 
 ```
 import numpy as np
@@ -179,9 +179,9 @@ plt. annotate(s, xy = arrow_crd, xytext = text_crd, arrowprops = dict)
 
 在图形中加中文注解，正式的余弦函数如下:
 
-![cn_matp](https://code.aliyun.com/louisehong/images/raw/master/cn_matp.png?raw=true)
+![cn_matp](https://oss.fenghong.tech/cn_matp.png?raw=true)
 
-![cn_matp](https://code.aliyun.com/louisehong/images/raw/master/cn_matp_arrow.png?raw=true)
+![cn_matp](https://oss.fenghong.tech/cn_matp_arrow.png?raw=true)
 
 ```
 import numpy as np

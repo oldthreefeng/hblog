@@ -9,7 +9,7 @@ categories: [Http]
 
 # Internet And China
 
-![1529724085331](https://code.aliyun.com/louisehong/images/raw/master/1529724085331.png)
+![1529724085331](https://oss.fenghong.tech/1529724085331.png)
 
 - 1969年
 
@@ -40,7 +40,7 @@ categories: [Http]
 
 TCP/IP协议
 
-![1529724743263](https://code.aliyun.com/louisehong/images/raw/master/1529724743263.png)
+![1529724743263](https://oss.fenghong.tech/1529724743263.png)
 
 ## 跨网络主机通讯
 
@@ -49,7 +49,7 @@ TCP/IP协议
 - 客户机套接字地址定义了一个唯一的客户进程
 - 服务器套接字地址定义了一个唯一的服务器进程
 
-![1529724935070](https://code.aliyun.com/louisehong/images/raw/master/1529724935070.png)
+![1529724935070](https://oss.fenghong.tech/1529724935070.png)
 
 ## socket套接字
 
@@ -70,11 +70,11 @@ SOCK_STREAM：流，tcp套接字，可靠地传递、面向连接
 SOCK_DGRAM：数据报，udp套接字，不可靠地传递、无连接
 SOCK_RAW: 裸套接字,无须tcp或tdp,APP直接通过IP包通信
 ```
-![1529725064099](https://code.aliyun.com/louisehong/images/raw/master/1529725064099.png)
+![1529725064099](https://oss.fenghong.tech/1529725064099.png)
 
 ## C/S程序套接字函数
 
-![1529725613846](https://code.aliyun.com/louisehong/images/raw/master/1529725613846.png)
+![1529725613846](https://oss.fenghong.tech/1529725613846.png)
 
 **套接字相关的系统调用：**
 ```
@@ -136,7 +136,7 @@ sock.close()
 ```
 # HTTP通讯及术语
 
-![1529726658190](https://code.aliyun.com/louisehong/images/raw/master/1529726658190.png)
+![1529726658190](https://oss.fenghong.tech/1529726658190.png)
 
 - http: `Hyper Text Transfer Protocol, 80/tcp`
 
@@ -178,7 +178,7 @@ application/javascript
 
 # HTTP协议介绍
 
-![1529728034881](https://code.aliyun.com/louisehong/images/raw/master/1529728034881.png)
+![1529728034881](https://oss.fenghong.tech/1529728034881.png)
 
 - http/0.9：1991
 >1. 原型版本，功能简陋，只有一个命令GET。`GET /index.html` ,服务器只能回应HTML格式字符串，不能回应别的格式.

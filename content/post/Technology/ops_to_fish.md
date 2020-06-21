@@ -12,7 +12,7 @@ categories: [tools]
 
 ## 上图
 
-![img](https://code.aliyun.com/louisehong/images/raw/master/ops-new-fish.png)
+![img](https://oss.fenghong.tech/ops-new-fish.png)
 
 ## 参考
 
