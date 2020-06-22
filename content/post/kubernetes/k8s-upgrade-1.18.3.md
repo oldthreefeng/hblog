@@ -97,12 +97,15 @@ scheduler:
     pathType: File
     readOnly: true
 
+## 修改完成后, 比对一下差异
+$ kubeadm upgrade diff --config kubeadm-config-upgrade.yaml
+
 ```
 
 ### 执行升级
 
 ```
-## 先干跑, 测试一下
+## 先干跑 dry-run , 测试一下
 $ kubeadm  upgrade  apply  -f --config  kubeadm-config-upgrade.yaml  --dry-run
 ```
 
@@ -189,6 +192,18 @@ Static pod: kube-scheduler-k8s-master hash: a3aa0a013314dd1f87b99ce93b006ffb
 [upgrade/kubelet] Now that your control plane is upgraded, please proceed with upgrading your kubelets if you haven't already done so.
 ```
 
+### 验证
+
+在master上执行即可
+
+```
+$ kubectl get nodes -o wide
+$ kubectl version
+$ kubeadm config view
+```
+
+
+
 ## 证书相关升级
 
 kubeadm自带的工具是1年证书过期. 时间太短. 
@@ -216,7 +231,7 @@ etcd-ca                 Jun 16, 2021 03:06 UTC   364d            no
 front-proxy-ca          Jun 16, 2021 03:06 UTC   364d             no 
 ```
 
-自己编译当前版本的kubeadm-v1.18.3. 查看源码得知
+自己编译当前版本的kubeadm-v1.18.3. 
 
 前提要求: 
 
@@ -235,7 +250,7 @@ $ git checkout v1.18.3
 
 ```
 
-重新编译kubeadm, 更改生成证书时长为100年
+查看源码得知, 所有的生成证书时间控制在` cmd/kubeadm/app/constants/constants.go`这个文件的`const`变量`CertificateValidity` , 修改文件后, 重新编译`kubeadm`
 
 ```
 
