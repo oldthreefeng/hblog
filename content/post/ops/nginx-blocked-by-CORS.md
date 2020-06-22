@@ -17,7 +17,7 @@ categories: [server]
 >
 > 当出现403跨域错误的时候 `No 'Access-Control-Allow-Origin' header is present on the requested resource`，需要给Nginx服务器配置响应的header参数. 
 
-![](https://oss.fenghong.tech/linux/EA65BF85-83B9-4536-98EA-7FCA624E063A.png)
+![](https://pic.fenghong.tech/linux/EA65BF85-83B9-4536-98EA-7FCA624E063A.png)
 
 ## 解决
 

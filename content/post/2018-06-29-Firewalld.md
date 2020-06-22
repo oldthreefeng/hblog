@@ -24,7 +24,7 @@ categories: [iptables]
   - 纳入默认zone，默认为public zone,管理员可以改为其它zone
 - 网卡默认属于public zone,lo网络接口属于trusted zone
 
-![1530369127584](https://oss.fenghong.tech/1530369127584.png)
+![1530369127584](https://pic.fenghong.tech/others/1530369127584.png)
 
 ## Firewalld配置
 

@@ -13,11 +13,11 @@ kubeadm是Kubernetes官方提供的用于快速安装Kubernetes集群的工具�
 
 dashboard
 
-![](https://oss.fenghong.tech/k8s/k8s_20200601171304.jpg)
+![](https://pic.fenghong.tech/k8s/k8s_20200601171304.jpg)
 
 grafana
 
-![](https://oss.fenghong.tech/k8s/k8s_20200601171608.jpg)
+![](https://pic.fenghong.tech/k8s/k8s_20200601171608.jpg)
 ## 环境准备
 
 ### 主机名

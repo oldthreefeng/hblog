@@ -26,29 +26,29 @@ JetBrains 公司旗下的 IDEA 功能都十分强大，深受各种编程语言�
 
 从官网[Open Source License](https://www.jetbrains.com/shop/eform/opensource?product=ALL),进行提交申请.
 
-![](https://oss.fenghong.tech/jetbrains/20191125122936.jpg)
+![](https://pic.fenghong.tech/jetbrains/20191125122936.jpg)
 
 ## 收到邮件
 
 通过上面的申请地址，我进行了开源许可证的申请，按照所提到的消息，剩下的我只需要等待就 OK 了。我用来申请的开源项目[ginuse](https://github.com/oldthreefeng/ginuse), 一个使用webhook发送deploy请求的.
 
-![](https://oss.fenghong.tech/jetbrains/20191125122853.jpg)
+![](https://pic.fenghong.tech/jetbrains/20191125122853.jpg)
 
 过了大概3天, 收到了一封jetBrains的授权同意邮件. 至此, 1年的开源使用许可已经申请下来.
 
-![](https://oss.fenghong.tech/jetbrains/20191125123245.jpg)
+![](https://pic.fenghong.tech/jetbrains/20191125123245.jpg)
 
 ## 使用许可
 
 使用附件的说明书. 点击link进入授权页面.
 
-![](https://oss.fenghong.tech/jetbrains/20191125123602.jpg)
+![](https://pic.fenghong.tech/jetbrains/20191125123602.jpg)
 
 分配至相关权限用户, 也可以邀请相关用户,分配相关的licence.我给自己分配了一个授权`louis@wangke.co`
 
 管理员可以通过账户管理, 来邀请团队用户使用licence. 
 
-![](https://oss.fenghong.tech/jetbrains/20191125124001.jpg)
+![](https://pic.fenghong.tech/jetbrains/20191125124001.jpg)
 
 ## 致谢
 

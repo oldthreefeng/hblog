@@ -10,7 +10,7 @@ categories: [server,ops]
 >  一次意外停电, 公司一台linux主机重启失败,  远程获取ip失败. 只能进到机房查看问题. 
 `$表示shell, #表示注释, > 表示 数据库`
 
-![](https://oss.fenghong.tech/tools/1591692298225.jpg)
+![](https://pic.fenghong.tech/tools/1591692298225.jpg)
 
 ## 问题发现
 

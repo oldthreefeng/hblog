@@ -21,11 +21,11 @@ categories: [server,ops]
 
 prometheus告警状态效果
 
-![node_export](https://oss.fenghong.tech/prometheus/alert_20200410092213.jpg)
+![node_export](https://pic.fenghong.tech/prometheus/alert_20200410092213.jpg)
 
 异常发送邮件告警
 
-![node_export](https://oss.fenghong.tech/prometheus/mail_20200410092240.jpg)
+![node_export](https://pic.fenghong.tech/prometheus/mail_20200410092240.jpg)
 
 ## 部署
 
@@ -170,7 +170,7 @@ $ systemctl restart prometheus
 
 访问prometheus, http://serverip:9090/.
 
-![node_export](https://oss.fenghong.tech/prometheus/alert_20200410092213.jpg)
+![node_export](https://pic.fenghong.tech/prometheus/alert_20200410092213.jpg)
 
 ## 验证
 

@@ -308,7 +308,7 @@ $ haproxy -f ha.cfg
 
 访问`http://ip:8100/stats`, 即可查看`haproxy`状态
 
-![test](https://oss.fenghong.tech/rabbitmq/20191106180241.png)
+![test](https://pic.fenghong.tech/rabbitmq/20191106180241.png)
 
 
 

@@ -206,8 +206,8 @@ time="2019-10-20T17:59:08+08:00" level=info msg="{\"code\":0,\"message\":\"succe
 
 ```
 添加如下:
-![](https://oss.fenghong.tech/syncd-cli.png)
-![](https://oss.fenghong.tech/syncd-cli-add-user.png)
+![](https://pic.fenghong.tech/others/syncd-cli.png)
+![](https://pic.fenghong.tech/others/syncd-cli-add-user.png)
 
 ## 算法思路 ##
 
