@@ -16,7 +16,7 @@ categories: [ops,jenkins]
 
 ## 项目架构图
 
-![](https://pic.fenghong.tech/k8s/java_devops.jgp)
+![](https://pic.fenghong.tech/k8s/java_devops.jpg)
 
 公司内部的k8s集群，主要跑的一个内部的crm系统，该系统的源码及构建管理使用的是`gitlab+docker+maven`, 代码测试用的`sonarqube`, 包管理使用的`harbor`, 部署使用的`jenkins+kubernetes`, 监控使用`kube-prometheus`, 日志使用`loki`,  配置中心使用`nacos`, 消息队列使用`rabbitmq`, 数据库使用`mysql+redis`
 
