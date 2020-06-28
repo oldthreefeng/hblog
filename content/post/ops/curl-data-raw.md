@@ -40,7 +40,8 @@ Error: Package: curl-7.71.0-1.0.cf.rhel7.x86_64 (/curl-7.71.0-1.0.cf.rhel7.x86_6
                libcurl(x86-64) = 7.29.0-57.el7
 
 
-$ yum install http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/curl-7.71.0-1.0.cf.rhel7.x86_64.rpm  http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libcurl-7.71.0-1.0.cf.rhel7.x86_64.rpm
+$ yum install http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/curl-7.71.0-1.0.cf.rhel7.x86_64.rpm \
+http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libcurl-7.71.0-1.0.cf.rhel7.x86_64.rpm
 ...
 Error: Package: libcurl-7.71.0-1.0.cf.rhel7.x86_64 (/libcurl-7.71.0-1.0.cf.rhel7.x86_64)
            Requires: libssh2(x86-64) >= 1.9.0
@@ -52,7 +53,9 @@ Error: Package: libcurl-7.71.0-1.0.cf.rhel7.x86_64 (/libcurl-7.71.0-1.0.cf.rhel7
 安装依赖`libcurl`和`libssh2`即可解决
 
 ```
-$ yum install http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/curl-7.71.0-1.0.cf.rhel7.x86_64.rpm  http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libcurl-7.71.0-1.0.cf.rhel7.x86_64.rpm http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libssh2-1.9.0-5.0.cf.rhel7.x86_64.rpm -y
+$ yum install http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/curl-7.71.0-1.0.cf.rhel7.x86_64.rpm \
+http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libcurl-7.71.0-1.0.cf.rhel7.x86_64.rpm \
+http://www.city-fan.org/ftp/contrib/yum-repo/rhel7/x86_64/libssh2-1.9.0-5.0.cf.rhel7.x86_64.rpm -y
 ```
 
 安装完成后, 查看安装的版本号, `centos 6`安装应该大同小异, 这边就不赘述了.  
