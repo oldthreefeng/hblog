@@ -1,6 +1,6 @@
 ```
 title: "git-rebase合并多commit记录"
-date: 2020-06-30 10:18:10
+date: 2020-06-30T10:18:18+08:00
 tags: [git,rebase]
 categories: [git]
 ```
