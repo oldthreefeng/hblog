@@ -185,7 +185,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:louis@wangke.co"
+    a-email = "mailto:louisehong4168@gmail.com"
     # b-stack-overflow = "https://fenghong.tech/"
     c-twitter = "https://twitter.com/louishong17"
     d-facebook = "https://www.facebook.com/feng.hong.75491"
@@ -193,12 +193,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     # f-google = "https://wiki.fenghong.tech"
     g-github = "https://github.com/oldthreefeng"
     h-weibo = "https://www.weibo.com/2910951313"
-    i-zhihu = "https://www.zhihu.com/peopleblog./hong-feng-87-10"
+    i-zhihu = "https://www.zhihu.com/people/hong-feng-87-10"
     # j-douban = "https://wiki.fenghong.tech"
     # k-pocket = "https://wiki.fenghong.tech"
     # l-tumblr = "https://wiki.fenghong.tech"
     m-instagram = "https://instagram.com/louisehong4168"
-    n-gitlab = "https://gogs.wangke.co"
+    # n-gitlab = "https://gogs.wangke.co"
     # o-bilibili = "https://wiki.fenghong.tech"
 
 # See https://gohugo.io/about/hugo-and-gdpr/

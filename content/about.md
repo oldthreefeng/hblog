@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2019-10-13T15:54:18+08:00
-lastmod: 2019-11-07T15:54:18+08:00
+lastmod: 2020-06-30T10:54:18+08:00
 keywords: []
 description: ""
 tags: []
@@ -41,7 +41,7 @@ sequenceDiagrams:
 
 <!--more-->
 
-联系我:   992165098@qq.com
+联系我:   992165098@qq.com  louisehong4168@gmail.com
 
 2016-07-06 学习`linux`基础, 从命令行到`bash shell`, 到内存, 进程, io, 网络, `awk, sed, grep `文本处理. 学习`linux`的磁盘阵列. 学习ssh相关概念, 从密码到秘钥的认知, 学习密码学基础.对称秘钥非对称秘钥.
 
@@ -78,3 +78,9 @@ sequenceDiagrams:
 近期在学微服务相关, 如服务发现之` consul`, 集群消息队列`rabbitMq`, 分布式配置管理值 `apollo`. 增加自己的集群管理能力, 集群高可用. 加强监控管理概念.
 
 > Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
+
+2020-06-30
+
+构建公司测试/开发的kubernetes环境, 从git push 到 应用部署,  由jenkins + k8s 接管. 快速迭代开发测试. 
+
+整体架构使用frp + 负载均衡 + kubernetes , 实现内网对外服务.
