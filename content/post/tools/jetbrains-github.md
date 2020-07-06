@@ -1,7 +1,7 @@
 ---
 title: "开源项目获取jetbrains全家桶licence"
 date: 2019-11-25T12:42:18+08:00
-lastmod: 2019-11-25T12:42:18+08:00
+lastmod: 2020-06-25T12:42:18+08:00
 tags: [goland,jetbrains]
 categories: [tools]
 ---
@@ -57,3 +57,32 @@ JetBrains 公司旗下的 IDEA 功能都十分强大，深受各种编程语言�
 虽然 JetBrains 全家桶在某宝、甚至破解网有各种不可描述的获取方式. 但是存在这种正规、不违背规则的福利，还是可以尝试一下。
 
 再次感叹开源的魅力!!再次感叹开源的魅力!!再次感叹开源的魅力!!
+
+### 续期
+
+```Project
+1. Do we know you ? 
+
+Yes 
+
+2. Tell us about your project 
+
+Language: go
+Project age: 10months
+Project website: https://www.fenghong.tech/post/go/gin-use-in-webhook/
+Repository Url: https://github.com/oldthreefeng/ginuse
+License URL: https://github.com/oldthreefeng/ginuse/blob/master/LICENSE
+No. of required: 1
+Project description: 
+	autoDeploy your project.  written in golang 
+	some api is developing
+
+3. Tell us about yourself
+Email: louisehong4168@gmail.com
+A link to your profile: https://github.com/oldthreefeng
+
+OK
+```
+
+
+

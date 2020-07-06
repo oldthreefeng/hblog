@@ -3,6 +3,8 @@ title: "k8s基于helm安装loki并持久化数据"
 date: 2020-06-19T21:34:18+08:00
 tags: [pvc,pv,nfs,nginxIngress,kubernetes,kuboard,loki]
 categories: [kubernetes]
+image: "https://pic.fenghong.tech/k8s/hero-loki.svg"
+type: "post"
 ---
 
 [TOC]
